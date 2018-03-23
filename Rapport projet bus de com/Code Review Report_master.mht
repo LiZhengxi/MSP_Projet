@@ -1,0 +1,3176 @@
+From: =?Windows-1252?Q?Enregistr=E9_par_Internet_Explorer=A011?=
+Subject: LDRA Testbed Code Review Report
+Date: Thu, 22 Mar 2018 12:48:17 +0100
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01D3C1DC.0D0F9FD0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.23651
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01D3C1DC.0D0F9FD0
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://C:\LDRA_Workarea\Master_tbwrkfls\Master.rps.htm
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><META content=3D"IE=3D7.0000" =
+http-equiv=3D"X-UA-Compatible">
+<TITLE>LDRA Testbed Code Review Report</TITLE>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3DContent-Type>
+<STYLE type=3Dtext/css>.orag-line {
+	BACKGROUND-COLOR: #ff7b42
+}
+.break {
+	BACKGROUND-COLOR: #ff7b42
+}
+.blue-line {
+	BACKGROUND-COLOR: #000080
+}
+.break-p {
+	BACKGROUND-COLOR: #000084
+}
+.break-p {
+	border-radius: 10px
+}
+.break {
+	border-radius: 10px
+}
+DIV {
+	PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; =
+PADDING-RIGHT: 0px
+}
+H2 {
+	TEXT-ALIGN: center
+}
+H3 {
+	TEXT-ALIGN: center
+}
+.header {
+	TEXT-ALIGN: center
+}
+TABLE TD {
+	TEXT-ALIGN: left
+}
+TABLE {
+	MARGIN: auto
+}
+P.pagebreak {
+	PAGE-BREAK-BEFORE: always
+}
+P.nopagebreak {
+=09
+}
+P.shiftleft {
+	MARGIN-LEFT: -54pt
+}
+UL {
+	PADDING-LEFT: 20px
+}
+BR.pagebreak {
+	PAGE-BREAK-BEFORE: always
+}
+</STYLE>
+
+<SCRIPT language=3DJavascript>
+
+function popup(mylink, windowname)
+{
+if (! window.focus && window.opener)
+{
+return true;
+}
+var href;
+var temp;
+if (typeof(mylink)=3D=3D'string')
+{
+href=3Dmylink;
+}
+else
+{
+href=3Dmylink.href;
+temp =3D window.open(href, windowname, 'width=3D600,        =
+height=3D300,scrollbars=3Dyes');
+temp.focus();
+return false;
+}
+}
+function targetopener(mylink, closeme, closeonly)
+{
+if (! (window.focus && window.opener))     return true;
+if (! closeonly)                                 =
+window.opener.location.href=3Dmylink.href;
+window.blur();
+window.opener.focus();
+if (closeme)                                    window.close();
+return false;
+return false;
+}
+
+</SCRIPT>
+
+<SCRIPT language=3DJavascript=20
+src=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/imagejs.js">=20
+// -->
+</SCRIPT>
+
+<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.18860"></HEAD>
+<BODY bgColor=3D#fffff2>
+<DIV class=3Dbreak=20
+style=3D"HEIGHT: 10px; WIDTH: 80%; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><A=20
+id=3Dtop_of_rep></A><BR>
+<STYLE type=3Dtext/css>A.set1:link {
+	TEXT-DECORATION: none; BACKGROUND: none transparent scroll repeat 0% =
+0%; COLOR: #fbfcc8
+}
+A.set1:visited {
+	TEXT-DECORATION: none; BACKGROUND: none transparent scroll repeat 0% =
+0%; COLOR: #fbfcc8
+}
+A.set1:active {
+	TEXT-DECORATION: none; BACKGROUND: none transparent scroll repeat 0% =
+0%; COLOR: #fbfcc8
+}
+A:link {
+	TEXT-DECORATION: none; BACKGROUND: none transparent scroll repeat 0% =
+0%; COLOR: blue
+}
+A:visited {
+	TEXT-DECORATION: none; BACKGROUND: none transparent scroll repeat 0% =
+0%; COLOR: blue
+}
+A:active {
+	TEXT-DECORATION: none; BACKGROUND: none transparent scroll repeat 0% =
+0%; COLOR: blue
+}
+</STYLE>
+
+<CENTER><FONT size=3D9><B>LDRA Testbed =AE Code Review Report =
+</FONT></B></CENTER>
+<CENTER><FONT size=3D9><B></FONT></B></CENTER>
+<CENTER>
+<H1>Group : Master </H1></CENTER><BR><BR><BR><BR>
+<HR width=3D"100%">
+
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT color=3D#fbfcc8 size=3D5>Overall Result: =
+FAIL=20
+    </FONT></TH></TR></TBODY></TABLE></CENTER>
+<HR width=3D"100%">
+<BR><BR><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR>
+<CENTER>
+<TABLE width=3D"80%" bgColor=3D#d7eded border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Report Production </TH>
+    <TH>Report Configuration </TH>
+    <TH>Analysis phases </TH></TR>
+  <TR>
+    <TD>
+      <UL>
+        <LI>C/C++ LDRA Testbed Version: 9.7.0
+        <LI>Produced On: Thu Mar 22 2018 at 12:47:52
+        <LI>Generated from GLH Repository</LI></UL></TD>
+    <TD>
+      <UL>
+        <LI>Report Level: Summary Report
+        <LI>Procedures Reported: All Procedures
+        <LI>Programming Standards Model: MISRA-C:2012
+        <LI>Line Numbers refer to: Original Source File
+        <LI>Violation Details: Violations Only
+        <LI>Reporting Scope: Source file and associated =
+header</LI></UL></TD>
+    <TD>
+      <UL>
+        <LI>Static: Yes
+        <LI>Complexity: Yes
+        <LI>Static Data Flow: No
+        <LI>Information Flow: No
+        <LI>Cross Reference: =
+No</LI></UL></TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV>
+<H4><A id=3Dcontents>Contents </A></H4>Overall Code Review Summary <BR>
+<UL>
+  <LI>Totals of Violations for each Standard <BR>
+  <LI><A=20
+  =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#procedure=
+_table">Table=20
+  of Procedure Results </A><BR>
+  <LI><A=20
+  =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#source_fi=
+le_table">Table=20
+  of Source Files in Group </A><BR>
+  <LI>Table of Global Basic Information <BR><BR></LI></UL><A=20
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#procedure=
+_reports">Report=20
+on Program Components </A><BR>
+<UL>
+  <LI>Code Review Results Global Program and Selected Procedures=20
+<BR><BR></LI></UL><A=20
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#key_to_te=
+rms">Key=20
+to Terms </A><BR>
+<HR>
+<BR><BR><BR><BR>
+<CENTER>
+<H2>Overall Code Review Summary</H2></CENTER><BR><BR>
+<H4>Totals for Violated Code Review Standards </H4><BR>
+<CENTER>
+<TABLE width=3D"80%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Number of Violations </TH>
+    <TH>LDRA Code </TH>
+    <TH>Mandatory Standards </TH>
+    <TH>MISRA-C:2012 Code </TH></TR>
+  <TR>
+    <TD bgColor=3D#ff8181 align=3Dcenter ,><FONT color=3Dblue>
+      <CENTER><A onclick=3D'return popup(this, "knotes")'=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master_link_popup496S.ht=
+m">7</A>=20
+      </CENTER></FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>496 S </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/standards.htm#standard_s496">') + =
+document.write('Function call with no prior declaration.') + =
+document.write('</a>') </SCRIPT>
+      </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/misra-c_2012_model.htm#rule_misra-c%3A2012_r.17.3">'=
+) + document.write('MISRA-C:2012 R.17.3') + document.write('</a>') =
+</SCRIPT>
+      </FONT></TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE width=3D"80%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Number of Violations </TH>
+    <TH>LDRA Code </TH>
+    <TH>Required Standards </TH>
+    <TH>MISRA-C:2012 Code </TH></TR>
+  <TR>
+    <TD bgColor=3D#ff8181 align=3Dcenter ,><FONT color=3Dblue>
+      <CENTER><A onclick=3D'return popup(this, "knotes")'=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master_link_popup9S.htm"=
+>1</A>=20
+      </CENTER></FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>9 S </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/standards.htm#standard_s9">') + =
+document.write('Assignment operation in expression.') + =
+document.write('</a>') </SCRIPT>
+      </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/misra-c_2012_model.htm#rule_misra-c%3A2012_r.13.1">'=
+) + document.write('MISRA-C:2012 R.13.1,R.13.2,R.13.4') + =
+document.write('</a>') </SCRIPT>
+      </FONT></TD></TR>
+  <TR>
+    <TD bgColor=3D#ff8181 align=3Dcenter ,><FONT color=3Dblue>
+      <CENTER><A onclick=3D'return popup(this, "knotes")'=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master_link_popup30S.htm=
+">1</A>=20
+      </CENTER></FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>30 S </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/standards.htm#standard_s30">') + =
+document.write('Deprecated usage of ++ or -- operators found.') + =
+document.write('</a>') </SCRIPT>
+      </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/misra-c_2012_model.htm#rule_misra-c%3A2012_r.13.1">'=
+) + document.write('MISRA-C:2012 R.13.1,R.13.2,R.13.3') + =
+document.write('</a>') </SCRIPT>
+      </FONT></TD></TR>
+  <TR>
+    <TD bgColor=3D#ff8181 align=3Dcenter ,><FONT color=3Dblue>
+      <CENTER><A onclick=3D'return popup(this, "knotes")'=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master_link_popup37S.htm=
+">2</A>=20
+      </CENTER></FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>37 S </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/standards.htm#standard_s37">') + =
+document.write('Procedure parameter has a type but no identifier.') + =
+document.write('</a>') </SCRIPT>
+      </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/misra-c_2012_model.htm#rule_misra-c%3A2012_r.8.2">')=
+ + document.write('MISRA-C:2012 R.8.2') + document.write('</a>') =
+</SCRIPT>
+      </FONT></TD></TR>
+  <TR>
+    <TD bgColor=3D#ff8181 align=3Dcenter ,><FONT color=3Dblue>
+      <CENTER><A onclick=3D'return popup(this, "knotes")'=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master_link_popup93S.htm=
+">3</A>=20
+      </CENTER></FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>93 S </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/standards.htm#standard_s93">') + =
+document.write('Value is not of appropriate type.') + =
+document.write('</a>') </SCRIPT>
+      </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/misra-c_2012_model.htm#rule_misra-c%3A2012_r.10.1">'=
+) + document.write('MISRA-C:2012 R.10.1,R.10.3,R.10.4,R.10.5,R.11.1') + =
+document.write('</a>') </SCRIPT>
+      </FONT></TD></TR>
+  <TR>
+    <TD bgColor=3D#ff8181 align=3Dcenter ,><FONT color=3Dblue>
+      <CENTER><A onclick=3D'return popup(this, "knotes")'=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master_link_popup96S.htm=
+">1</A>=20
+      </CENTER></FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>96 S </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/standards.htm#standard_s96">') + =
+document.write('Use of mixed mode arithmetic.') + document.write('</a>') =
+</SCRIPT>
+      </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/misra-c_2012_model.htm#rule_misra-c%3A2012_r.10.1">'=
+) + document.write('MISRA-C:2012 R.10.1,R.10.2,R.10.3,R.10.4') + =
+document.write('</a>') </SCRIPT>
+      </FONT></TD></TR>
+  <TR>
+    <TD bgColor=3D#ff8181 align=3Dcenter ,><FONT color=3Dblue>
+      <CENTER><A onclick=3D'return popup(this, "knotes")'=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master_link_popup114S.ht=
+m">5</A>=20
+      </CENTER></FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>114 S </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/standards.htm#standard_s114">') + =
+document.write('Expression is not Boolean.') + document.write('</a>') =
+</SCRIPT>
+      </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/misra-c_2012_model.htm#rule_misra-c%3A2012_r.10.1">'=
+) + document.write('MISRA-C:2012 R.10.1,R.14.4') + =
+document.write('</a>') </SCRIPT>
+      </FONT></TD></TR>
+  <TR>
+    <TD bgColor=3D#ff8181 align=3Dcenter ,><FONT color=3Dblue>
+      <CENTER><A onclick=3D'return popup(this, "knotes")'=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master_link_popup120S.ht=
+m">102</A>=20
+      </CENTER></FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>120 S </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/standards.htm#standard_s120">') + =
+document.write('Use of bit operator on signed type.') + =
+document.write('</a>') </SCRIPT>
+      </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/misra-c_2012_model.htm#rule_misra-c%3A2012_r.10.1">'=
+) + document.write('MISRA-C:2012 R.10.1') + document.write('</a>') =
+</SCRIPT>
+      </FONT></TD></TR>
+  <TR>
+    <TD bgColor=3D#ff8181 align=3Dcenter ,><FONT color=3Dblue>
+      <CENTER><A onclick=3D'return popup(this, "knotes")'=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master_link_popup243S.ht=
+m">2</A>=20
+      </CENTER></FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>243 S </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/standards.htm#standard_s243">') + =
+document.write('Included file not protected with #define.') + =
+document.write('</a>') </SCRIPT>
+      </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/misra-c_2012_model.htm#rule_misra-c%3A2012_d.4.10">'=
+) + document.write('MISRA-C:2012 D.4.10') + document.write('</a>') =
+</SCRIPT>
+      </FONT></TD></TR>
+  <TR>
+    <TD bgColor=3D#ff8181 align=3Dcenter ,><FONT color=3Dblue>
+      <CENTER><A onclick=3D'return popup(this, "knotes")'=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master_link_popup433S.ht=
+m">7</A>=20
+      </CENTER></FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>433 S </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/standards.htm#standard_s433">') + =
+document.write('Type conversion without cast.') + document.write('</a>') =
+</SCRIPT>
+      </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/misra-c_2012_model.htm#rule_misra-c%3A2012_r.10.1">'=
+) + document.write('MISRA-C:2012 R.10.1,R.10.3,R.10.4,R.11.5') + =
+document.write('</a>') </SCRIPT>
+      </FONT></TD></TR>
+  <TR>
+    <TD bgColor=3D#ff8181 align=3Dcenter ,><FONT color=3Dblue>
+      <CENTER><A onclick=3D'return popup(this, "knotes")'=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master_link_popup434S.ht=
+m">1</A>=20
+      </CENTER></FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>434 S </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/standards.htm#standard_s434">') + =
+document.write('Signed/unsigned conversion without cast.') + =
+document.write('</a>') </SCRIPT>
+      </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/misra-c_2012_model.htm#rule_misra-c%3A2012_r.10.3">'=
+) + document.write('MISRA-C:2012 R.10.3,R.10.4') + =
+document.write('</a>') </SCRIPT>
+      </FONT></TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE width=3D"80%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Number of Violations </TH>
+    <TH>LDRA Code </TH>
+    <TH>Advisory Standards </TH>
+    <TH>MISRA-C:2012 Code </TH></TR>
+  <TR>
+    <TD bgColor=3Dyellow align=3Dcenter ,><FONT color=3Dblue>
+      <CENTER><A onclick=3D'return popup(this, "knotes")'=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master_link_popup90S.htm=
+">2</A>=20
+      </CENTER></FONT></TD>
+    <TD bgColor=3Dyellow ,><FONT color=3Dblue>90 S </FONT></TD>
+    <TD bgColor=3Dyellow ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/standards.htm#standard_s90">') + =
+document.write('Basic type declaration used.') + document.write('</a>') =
+</SCRIPT>
+      </FONT></TD>
+    <TD bgColor=3Dyellow ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/misra-c_2012_model.htm#rule_misra-c%3A2012_d.4.6">')=
+ + document.write('MISRA-C:2012 D.4.6') + document.write('</a>') =
+</SCRIPT>
+      </FONT></TD></TR>
+  <TR>
+    <TD bgColor=3Dyellow align=3Dcenter ,><FONT color=3Dblue>
+      <CENTER><A onclick=3D'return popup(this, "knotes")'=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master_link_popup495S.ht=
+m">2</A>=20
+      </CENTER></FONT></TD>
+    <TD bgColor=3Dyellow ,><FONT color=3Dblue>495 S </FONT></TD>
+    <TD bgColor=3Dyellow ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/standards.htm#standard_s495">') + =
+document.write('Typedef name has no size indication.') + =
+document.write('</a>') </SCRIPT>
+      </FONT></TD>
+    <TD bgColor=3Dyellow ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/misra-c_2012_model.htm#rule_misra-c%3A2012_d.4.6">')=
+ + document.write('MISRA-C:2012 D.4.6') + document.write('</a>') =
+</SCRIPT>
+      </FONT></TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE width=3D"80%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Number of Violations </TH>
+    <TH>LDRA Code </TH>
+    <TH>Document Standards </TH>
+    <TH>MISRA-C:2012 Code </TH></TR>
+  <TR>
+    <TD bgColor=3Dgreen align=3Dcenter ,><FONT color=3Dwhite>
+      <CENTER><A onclick=3D'return popup(this, "knotes")'=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master_link_popup69S.htm=
+">1</A>=20
+      </CENTER></FONT></TD>
+    <TD bgColor=3Dgreen ,><FONT color=3Dwhite>69 S </FONT></TD>
+    <TD bgColor=3Dgreen ,><FONT color=3Dwhite>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/standards.htm#standard_s69">') + =
+document.write('#pragma used.') + document.write('</a>') </SCRIPT>
+      </FONT></TD>
+    <TD bgColor=3Dgreen ,><FONT color=3Dwhite>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/misra-c_2012_model.htm#rule_misra-c%3A2012_d.1.1">')=
+ + document.write('MISRA-C:2012 D.1.1') + document.write('</a>') =
+</SCRIPT>
+      </FONT></TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE width=3D"80%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TD>Number of Mandatory Standards checked </TD>
+    <TD align=3Dcenter>15 </TD></TR>
+  <TR>
+    <TD>Number of Required Standards checked </TD>
+    <TD align=3Dcenter>202 </TD></TR>
+  <TR>
+    <TD>Number of Advisory Standards checked </TD>
+    <TD align=3Dcenter>26 </TD></TR>
+  <TR>
+    <TD>Number of Document Standards checked </TD>
+    <TD align=3Dcenter>3 </TD></TR>
+  <TR>
+    <TD>Total Standards checked </TD>
+    <TD align=3Dcenter>243 </TD></TR>
+  <TR>
+    <TD>Total Standards checked including Document </TD>
+    <TD align=3Dcenter>246 =
+</TD></TR></TBODY></TABLE></CENTER><BR><BR><BR>
+<P class=3Dpagebreak><BR>
+<P><BR>
+<HR width=3D"100%">
+<FONT color=3D#ff0000>
+<CENTER>
+<H3>OVERALL RESULT: FAIL</H3></CENTER></FONT>
+<HR width=3D"100%">
+<BR><A id=3Dprocedure_table></A><BR>Out of 19 program components, 4 =
+(21.05 %) pass=20
+( of which 0 conditionally pass ) and 15 fail ( of which 0 fail only =
+because of=20
+insufficient comments ) <BR><BR>
+<H4>Procedure Results </H4>
+<CENTER>
+<TABLE width=3D"80%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE width=3D"100%" bgColor=3D#ece2e2>
+        <TBODY>
+        <TR>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH></TR>
+        <TR align=3Dleft>
+          <TH colSpan=3D11><TT>Code Review Result </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"19%" colSpan=3D11><TT>Procedure </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"19%" colSpan=3D11><TT>Source File </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"19%" colSpan=3D11><TT><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#unq_key">=
+Unique=20
+            Violations</A> </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"19%" colSpan=3D11><TT><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#unq_key">=
+Failure=20
+            Density</A> </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH></TR>
+        <TR align=3Dleft>
+          <TH width=3D"79%" colSpan=3D44><TT>&nbsp; </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH colSpan=3D11><TT>(Viols/R.Line %) </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#global_pr=
+og">Global=20
+            Program</A> </TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#008000>Pass </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#adc_init_=
+adc.c_adc.c_1">ADC_init</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>ADC.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D11>0 </TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D11>0 </TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#adc_demar=
+rer_conversion_adc.c_adc.c_2">ADC_Demarrer_conversion</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>ADC.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87>4 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D10><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D6>50 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D5><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#adc_lire_=
+resultat_adc.c_adc.c_3">ADC_Lire_resultat</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>ADC.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87>8 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D10><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D5>45 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D6><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#initline_=
+adc.c_adc.c_4">initline</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>ADC.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87>4 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D10><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D11><FONT color=3Dwhite>160 =
+</FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#automatiq=
+ue_main.c_main.c_1">automatique</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>main.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D2>13 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D9><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D2>14 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D9><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#main_main=
+.c_main.c_2">main</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>main.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87>8 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D10><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D2>13 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D9><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#usci0rx_i=
+sr_main.c_main.c_3">USCI0RX_ISR</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>main.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87>4 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D10><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87>8 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D10><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#init_robo=
+t_robotv2.c_robotv2.c_1">Init_Robot</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>robotv2.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87>4 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D10><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D11><FONT color=3Dwhite>225 =
+</FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#choix_dir=
+ection_robotv2.c_robotv2.c_2">Choix_direction</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>robotv2.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87>8 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D10><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D8>71 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D3><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#008000>Pass </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#vitesse_m=
+oteurs_robotv2.c_robotv2.c_3">Vitesse_moteurs</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>robotv2.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D11>0 </TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D11>0 </TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#008000>Pass </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#arret_rob=
+ot_robotv2.c_robotv2.c_4">Arret_robot</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>robotv2.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D11>0 </TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D11>0 </TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#008000>Pass </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#demarrer_=
+robot_robotv2.c_robotv2.c_5">Demarrer_robot</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>robotv2.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D11>0 </TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D11>0 </TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#tempo_rob=
+otv2.c_robotv2.c_6">tempo</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>robotv2.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87>4 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D10><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87>8 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D10><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#spi_init_=
+spi_init.c_spi_init.c_1">SPI_Init</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>SPI_Init.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87>8 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D10><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D10>93 </TD>
+          <TD bgColor=3D#afe1ab><FONT color=3D#afe1ab>- </FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#inituart_=
+uart_init.c_uart_init.c_1">InitUART</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>Uart_Init.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87>4 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D10><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D11><FONT color=3Dwhite>186 =
+</FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#initport_=
+uart_init.c_uart_init.c_2">InitPort</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>Uart_Init.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87>4 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D10><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D11><FONT color=3Dwhite>240 =
+</FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#txdata_ua=
+rt_init.c_uart_init.c_3">TXdata</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>Uart_Init.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D2>13 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D9><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D5>40 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D6><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#print_str=
+_uart_init.c_uart_init.c_4">print_str</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>Uart_Init.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D2>13 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D9><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D3>27 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D8><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          =
+<TD></TD></TR></TD></TR></TBODY></TABLE></TR></TBODY></TABLE></CENTER><BR=
+><BR>
+<H4><A id=3Dglobal_prog>Global Information </A></H4>
+<H4><A id=3Dsource_file_table>Source Files in Group </A></H4>
+<CENTER>
+<TABLE width=3D"80%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Name </TH>
+    <TH>Last Modification Date </TH></TR>
+  <TR>
+    <TD><FONT>C:\Users\z.li.14\Desktop\Master\robotv2.c </FONT></TD>
+    <TD>Wed Mar 21 10:01:24 2018 </TD></TR>
+  <TR>
+    <TD><FONT>C:\Users\z.li.14\Desktop\Master\main.c </FONT></TD>
+    <TD>Wed Mar 21 10:38:28 2018 </TD></TR>
+  <TR>
+    <TD><FONT>C:\Users\z.li.14\Desktop\Master\Uart_Init.c </FONT></TD>
+    <TD>Wed Mar 21 10:21:41 2018 </TD></TR>
+  <TR>
+    <TD><FONT>C:\Users\z.li.14\Desktop\Master\SPI_Init.c </FONT></TD>
+    <TD>Wed Mar 21 09:20:10 2018 </TD></TR>
+  <TR>
+    <TD><FONT>C:\Users\z.li.14\Desktop\Master\ADC.c </FONT></TD>
+    <TD>Wed Mar 21 10:12:49 2018 </TD></TR></TBODY></TABLE></CENTER><BR>
+<HR>
+<BR><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Global=20
+Basic Information </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TD>Number of procedures: </TD>
+    <TD align=3Dcenter>18 </TD></TR>
+  <TR>
+    <TD>Number of locally uncalled procedures: </TD>
+    <TD align=3Dcenter>1 </TD></TR>
+  <TR>
+    <TD>Maximum loop depth: </TD>
+    <TD align=3Dcenter>2 </TD></TR>
+  <TR>
+    <TD>Total Cyclomatic Complexity: </TD>
+    <TD align=3Dcenter>23 </TD></TR>
+  <TR>
+    <TD>Number of reformatted executable lines: </TD>
+    <TD align=3Dcenter>307 </TD></TR>
+  <TR>
+    <TD>Number of lines of comments: </TD>
+    <TD align=3Dcenter>290 </TD></TR></TBODY></TABLE></CENTER><BR>
+<HR>
+<A id=3Dprocedure_reports></A><BR>
+<CENTER>
+<H2>Summary Report on all Program Components</H2></CENTER><BR><BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT color=3D#fbfcc8 size=3D5>Globals / code =
+outside=20
+      procedures - FAIL </FONT></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary - All files </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>File: Src Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD>main.c: 2 </TD>
+    <TD>Included file not protected with #define. </TD>
+    <TD>MISRA-C:2012 D.4.10 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>O </TD>
+    <TD>main.c: 7 </TD>
+    <TD>Basic type declaration used. : unsigned char UCHAR </TD>
+    <TD>MISRA-C:2012 D.4.6 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>O </TD>
+    <TD>main.c: 8 </TD>
+    <TD>Basic type declaration used. : unsigned int UINT_32 </TD>
+    <TD>MISRA-C:2012 D.4.6 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD>main.c: 10 </TD>
+    <TD>Value is not of appropriate type. : (unsigned char and char): =
+</TD>
+    <TD>MISRA-C:2012 R.10.1,R.10.3,R.10.4,R.10.5,R.11.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD>main.c: 17 </TD>
+    <TD>Value is not of appropriate type. : (unsigned char and char): =
+</TD>
+    <TD>MISRA-C:2012 R.10.1,R.10.3,R.10.4,R.10.5,R.11.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD>main.c: 22 </TD>
+    <TD>Value is not of appropriate type. : (unsigned char and char): =
+</TD>
+    <TD>MISRA-C:2012 R.10.1,R.10.3,R.10.4,R.10.5,R.11.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter><A id=3Dfirst_69_s>I</A> </TD>
+    <TD>main.c: 120 </TD>
+    <TD>#pragma used. </TD>
+    <TD>MISRA-C:2012 D.1.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD>robotv2.c: 12 </TD>
+    <TD>Included file not protected with #define. </TD>
+    <TD>MISRA-C:2012 D.4.10 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>O </TD>
+    <TD>robotv2.h: 6 </TD>
+    <TD>Typedef name has no size indication. : UCHAR </TD>
+    <TD>MISRA-C:2012 D.4.6 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD>robotv2.h: 33 </TD>
+    <TD>Procedure parameter has a type but no identifier. : param 1 =
+</TD>
+    <TD>MISRA-C:2012 R.8.2 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD>robotv2.h: 55 </TD>
+    <TD>Procedure parameter has a type but no identifier. : param 1 =
+</TD>
+    <TD>MISRA-C:2012 R.8.2 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>O </TD>
+    <TD>Uart_Init.h: 10 </TD>
+    <TD>Typedef name has no size indication. : UCHAR </TD>
+    <TD>MISRA-C:2012 D.4.6 </TD></TR></TBODY></TABLE></CENTER><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#top_of_re=
+p">Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#key_to_te=
+rms">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#procedure=
+_table">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#contents"=
+>Contents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dadc_demarrer_conversion_adc.c_adc.c_2></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT size=3D5><A class=3Dset1=20
+      =
+href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Master\ADC.c&amp;L=
+ine=3D50">ADC_Demarrer_conversion<BR>(50=20
+      to 54 ADC.c) - FAIL =
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>53 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: =
+ADC10CTL0 </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>53 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: ENC =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#top_of_re=
+p">Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#key_to_te=
+rms">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#procedure=
+_table">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#contents"=
+>Contents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dadc_lire_resultat_adc.c_adc.c_3></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT size=3D5><A class=3Dset1=20
+      =
+href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Master\ADC.c&amp;L=
+ine=3D66">ADC_Lire_resultat<BR>(66=20
+      to 74 ADC.c) - FAIL =
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>68 </TD>
+    <TD>Use of bit operator on signed type. : &amp; used with int: =
+ADC10CTL1=20
+    </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>68 </TD>
+    <TD>Use of bit operator on signed type. : &amp; used with int: =
+ADC10BUSY=20
+    </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>68 </TD>
+    <TD>Expression is not Boolean. </TD>
+    <TD>MISRA-C:2012 R.10.1,R.14.4 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>71 </TD>
+    <TD>Use of bit operator on signed type. : &amp;=3D used with int: =
+ADC10CTL0=20
+    </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>71 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: ENC </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#top_of_re=
+p">Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#key_to_te=
+rms">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#procedure=
+_table">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#contents"=
+>Contents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dinitline_adc.c_adc.c_4></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT size=3D5><A class=3Dset1=20
+      =
+href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Master\ADC.c&amp;L=
+ine=3D84">initline<BR>(84=20
+      to 94 ADC.c) - FAIL =
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>85 </TD>
+    <TD>Use of bit operator on signed type. : &amp;=3D used with int: =
+P1SEL </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>85 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: ( BIT0 ) =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>86 </TD>
+    <TD>Use of bit operator on signed type. : &amp;=3D used with int: =
+P1SEL2 </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>86 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: ( BIT0 ) =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>87 </TD>
+    <TD>Use of bit operator on signed type. : &amp;=3D used with int: =
+P1DIR </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>87 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: ( BIT0 ) =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>88 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: =
+ADC10AE0 </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>88 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: BIT0 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>90 </TD>
+    <TD>Use of bit operator on signed type. : &amp;=3D used with int: =
+P1SEL </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>90 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: ( BIT6 ) =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>91 </TD>
+    <TD>Use of bit operator on signed type. : &amp;=3D used with int: =
+P1SEL2 </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>91 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: ( BIT6 ) =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>92 </TD>
+    <TD>Use of bit operator on signed type. : &amp;=3D used with int: =
+P1DIR </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>92 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: ( BIT6 ) =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>93 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: =
+ADC10AE0 </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>93 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: BIT6 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#top_of_re=
+p">Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#key_to_te=
+rms">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#procedure=
+_table">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#contents"=
+>Contents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dautomatique_main.c_main.c_1></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT size=3D5><A class=3Dset1=20
+      =
+href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Master\main.c&amp;=
+Line=3D25">automatique<BR>(25=20
+      to 79 main.c) - FAIL =
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter>M </TD>
+    <TD align=3Dcenter>28 </TD>
+    <TD>Function call with no prior declaration. : __delay_cycles </TD>
+    <TD>MISRA-C:2012 R.17.3 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>M </TD>
+    <TD align=3Dcenter>43 </TD>
+    <TD>Function call with no prior declaration. : __delay_cycles </TD>
+    <TD>MISRA-C:2012 R.17.3 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>M </TD>
+    <TD align=3Dcenter>52 </TD>
+    <TD>Function call with no prior declaration. : __delay_cycles </TD>
+    <TD>MISRA-C:2012 R.17.3 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>M </TD>
+    <TD align=3Dcenter>69 </TD>
+    <TD>Function call with no prior declaration. : __delay_cycles </TD>
+    <TD>MISRA-C:2012 R.17.3 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>38 </TD>
+    <TD>Use of bit operator on signed type. : &amp; used with int: IFG2 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>38 </TD>
+    <TD>Use of bit operator on signed type. : &amp; used with int: =
+UCB0TXIFG=20
+    </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>38 </TD>
+    <TD>Expression is not Boolean. </TD>
+    <TD>MISRA-C:2012 R.10.1,R.14.4 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>48 </TD>
+    <TD>Use of bit operator on signed type. : &amp; used with int: IFG2 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>48 </TD>
+    <TD>Use of bit operator on signed type. : &amp; used with int: =
+UCB0TXIFG=20
+    </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>48 </TD>
+    <TD>Expression is not Boolean. </TD>
+    <TD>MISRA-C:2012 R.10.1,R.14.4 =
+</TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#top_of_re=
+p">Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#key_to_te=
+rms">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#procedure=
+_table">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#contents"=
+>Contents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dmain_main.c_main.c_2></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT size=3D5><A class=3Dset1=20
+      =
+href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Master\main.c&amp;=
+Line=3D94">main<BR>(94=20
+      to 115 main.c) - FAIL =
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter>M </TD>
+    <TD align=3Dcenter>109 </TD>
+    <TD>Function call with no prior declaration. : __bis_SR_register =
+</TD>
+    <TD>MISRA-C:2012 R.17.3 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>100 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: P1OUT =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>100 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: BIT0 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#top_of_re=
+p">Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#key_to_te=
+rms">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#procedure=
+_table">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#contents"=
+>Contents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dusci0rx_isr_main.c_main.c_3></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT size=3D5><A class=3Dset1=20
+      =
+href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Master\main.c&amp;=
+Line=3D121">USCI0RX_ISR<BR>(121=20
+      to 167 main.c) - FAIL =
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>125 </TD>
+    <TD>Type conversion without cast. : (unsigned char and char): c =
+=3D=3D 'm' </TD>
+    <TD>MISRA-C:2012 R.10.1,R.10.3,R.10.4,R.11.5 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>130 </TD>
+    <TD>Type conversion without cast. : (unsigned char and char): c =
+=3D=3D 'z' </TD>
+    <TD>MISRA-C:2012 R.10.1,R.10.3,R.10.4,R.11.5 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>135 </TD>
+    <TD>Type conversion without cast. : (unsigned char and char): c =
+=3D=3D 'a' </TD>
+    <TD>MISRA-C:2012 R.10.1,R.10.3,R.10.4,R.11.5 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>139 </TD>
+    <TD>Type conversion without cast. : (unsigned char and char): c =
+=3D=3D 's' </TD>
+    <TD>MISRA-C:2012 R.10.1,R.10.3,R.10.4,R.11.5 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>144 </TD>
+    <TD>Type conversion without cast. : (unsigned char and char): c =
+=3D=3D 'q' </TD>
+    <TD>MISRA-C:2012 R.10.1,R.10.3,R.10.4,R.11.5 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>152 </TD>
+    <TD>Type conversion without cast. : (unsigned char and char): c =
+=3D=3D 'd' </TD>
+    <TD>MISRA-C:2012 R.10.1,R.10.3,R.10.4,R.11.5 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>160 </TD>
+    <TD>Type conversion without cast. : (unsigned char and char): c =
+=3D=3D 'n' </TD>
+    <TD>MISRA-C:2012 R.10.1,R.10.3,R.10.4,R.11.5=20
+</TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#top_of_re=
+p">Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#key_to_te=
+rms">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#procedure=
+_table">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#contents"=
+>Contents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dinit_robot_robotv2.c_robotv2.c_1></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT size=3D5><A class=3Dset1=20
+      =
+href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Master\robotv2.c&a=
+mp;Line=3D26">Init_Robot<BR>(26=20
+      to 40 robotv2.c) - FAIL =
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>28 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: P2DIR =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>28 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: BIT2 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>28 </TD>
+    <TD>Use of bit operator on signed type. : | used with int: BIT2 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>28 </TD>
+    <TD>Use of bit operator on signed type. : | used with int: BIT4 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>30 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: P2SEL =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>30 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: BIT2 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>30 </TD>
+    <TD>Use of bit operator on signed type. : | used with int: BIT2 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>30 </TD>
+    <TD>Use of bit operator on signed type. : | used with int: BIT4 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>31 </TD>
+    <TD>Use of bit operator on signed type. : &amp;=3D used with int: =
+P2SEL2 </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>31 </TD>
+    <TD>Use of bit operator on signed type. : | used with int: BIT2 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>31 </TD>
+    <TD>Use of bit operator on signed type. : | used with int: BIT4 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>31 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: ( BIT2 | =
+BIT4 )=20
+    </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>34 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: P2DIR =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>34 </TD>
+    <TD>Use of bit operator on signed type. : | used with int: BIT1 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>34 </TD>
+    <TD>Use of bit operator on signed type. : | used with int: BIT5 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>34 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: ( BIT1 =
+| BIT5=20
+      ) </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>36 </TD>
+    <TD>Use of bit operator on signed type. : | used with int: TASSEL_2 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>36 </TD>
+    <TD>Use of bit operator on signed type. : | used with int: MC_1 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#top_of_re=
+p">Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#key_to_te=
+rms">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#procedure=
+_table">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#contents"=
+>Contents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dchoix_direction_robotv2.c_robotv2.c_2></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT size=3D5><A class=3Dset1=20
+      =
+href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Master\robotv2.c&a=
+mp;Line=3D53">Choix_direction<BR>(53=20
+      to 58 robotv2.c) - FAIL =
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>55 </TD>
+    <TD>Use of bit operator on signed type. : &amp;=3D used with int: =
+P2OUT </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>55 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: BIT1 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>56 </TD>
+    <TD>Use of bit operator on signed type. : &amp;=3D used with int: =
+P2OUT </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>56 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: BIT5 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter><A id=3Dfirst_96_s>C</A> </TD>
+    <TD align=3Dcenter>57 </TD>
+    <TD>Use of mixed mode arithmetic. : (int and unsigned char): ( sens=20
+      &lt;&lt; 1U </TD>
+    <TD>MISRA-C:2012 R.10.1,R.10.2,R.10.3,R.10.4=20
+</TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#top_of_re=
+p">Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#key_to_te=
+rms">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#procedure=
+_table">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#contents"=
+>Contents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dtempo_robotv2.c_robotv2.c_6></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT size=3D5><A class=3Dset1=20
+      =
+href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Master\robotv2.c&a=
+mp;Line=3D113">tempo<BR>(113=20
+      to 119 robotv2.c) - FAIL =
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter>M </TD>
+    <TD align=3Dcenter>117 </TD>
+    <TD>Function call with no prior declaration. : __delay_cycles </TD>
+    <TD>MISRA-C:2012 R.17.3 </TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#top_of_re=
+p">Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#key_to_te=
+rms">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#procedure=
+_table">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#contents"=
+>Contents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dspi_init_spi_init.c_spi_init.c_1></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT size=3D5><A class=3Dset1=20
+      =
+href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Master\SPI_Init.c&=
+amp;Line=3D27">SPI_Init<BR>(27=20
+      to 40 SPI_Init.c) - FAIL =
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter>M </TD>
+    <TD align=3Dcenter>38 </TD>
+    <TD>Function call with no prior declaration. : __delay_cycles </TD>
+    <TD>MISRA-C:2012 R.17.3 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>29 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: =
+UCB0CTL1 </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>29 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: =
+UCSWRST </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>30 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: P1DIR =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>30 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: BIT5 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>33 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: =
+UCB0CTL0 </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>33 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: UCCKPL =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>34 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: =
+UCB0CTL1 </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>34 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: =
+UCSSEL_2 </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>35 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: =
+UCB0BR0 </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>35 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: 0x02 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>37 </TD>
+    <TD>Use of bit operator on signed type. : &amp;=3D used with int: =
+UCB0CTL1=20
+    </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>37 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: UCSWRST =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#top_of_re=
+p">Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#key_to_te=
+rms">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#procedure=
+_table">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#contents"=
+>Contents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dinituart_uart_init.c_uart_init.c_1></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT size=3D5><A class=3Dset1=20
+      =
+href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Master\Uart_Init.c=
+&amp;Line=3D23">InitUART<BR>(23=20
+      to 37 Uart_Init.c) - FAIL =
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>25 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: P1SEL =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>25 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: ( BIT1 =
++ BIT2=20
+      ) </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>26 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: P1SEL2 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>26 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: ( BIT1 =
++ BIT2=20
+      ) </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>27 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: =
+UCA0CTL1 </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>27 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: =
+UCSSEL_2 </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>30 </TD>
+    <TD>Use of bit operator on signed type. : &amp;=3D used with int: =
+UCA0CTL0=20
+    </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>30 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: UCPEN =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>30 </TD>
+    <TD>Use of bit operator on signed type. : &amp; used with int: ~ =
+UCPEN </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>30 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: UCPAR =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>30 </TD>
+    <TD>Use of bit operator on signed type. : &amp; used with int: ~ =
+UCPAR </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>30 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: UCMSB =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>31 </TD>
+    <TD>Use of bit operator on signed type. : &amp;=3D used with int: =
+UCA0CTL0=20
+    </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>31 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: UC7BIT =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>31 </TD>
+    <TD>Use of bit operator on signed type. : &amp; used with int: ~ =
+UC7BIT=20
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>31 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: UCSPB =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>31 </TD>
+    <TD>Use of bit operator on signed type. : &amp; used with int: ~ =
+UCSPB </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>31 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: UCMODE1 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>32 </TD>
+    <TD>Use of bit operator on signed type. : &amp;=3D used with int: =
+UCA0CTL0=20
+    </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>32 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: UCMODE0 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>32 </TD>
+    <TD>Use of bit operator on signed type. : &amp; used with int: ~ =
+UCMODE0=20
+    </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>32 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: UCSYNC =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>33 </TD>
+    <TD>Use of bit operator on signed type. : &amp;=3D used with int: =
+UCA0CTL1=20
+    </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>33 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: UCSWRST =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>36 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: IE2 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>36 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: =
+UCA0RXIE </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#top_of_re=
+p">Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#key_to_te=
+rms">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#procedure=
+_table">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#contents"=
+>Contents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dinitport_uart_init.c_uart_init.c_2></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT size=3D5><A class=3Dset1=20
+      =
+href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Master\Uart_Init.c=
+&amp;Line=3D42">InitPort<BR>(42=20
+      to 46 Uart_Init.c) - FAIL =
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>43 </TD>
+    <TD>Use of bit operator on signed type. : &amp;=3D used with int: =
+P1SEL </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>43 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: BIT0 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>43 </TD>
+    <TD>Use of bit operator on signed type. : | used with int: ~ BIT0 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>43 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: BIT6 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>43 </TD>
+    <TD>Use of bit operator on signed type. : &amp;=3D used with int: ( =
+~ BIT0 |=20
+      ~ BIT6 ) </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>44 </TD>
+    <TD>Use of bit operator on signed type. : &amp;=3D used with int: =
+P1SEL2 </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>44 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: BIT0 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>44 </TD>
+    <TD>Use of bit operator on signed type. : | used with int: ~ BIT0 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>44 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: BIT6 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>44 </TD>
+    <TD>Use of bit operator on signed type. : &amp;=3D used with int: ( =
+~ BIT0 |=20
+      ~ BIT6 ) </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>45 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: P1DIR =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>45 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: BIT0 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#top_of_re=
+p">Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#key_to_te=
+rms">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#procedure=
+_table">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#contents"=
+>Contents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dtxdata_uart_init.c_uart_init.c_3></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT size=3D5><A class=3Dset1=20
+      =
+href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Master\Uart_Init.c=
+&amp;Line=3D50">TXdata<BR>(50=20
+      to 55 Uart_Init.c) - FAIL =
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>51 </TD>
+    <TD>Use of bit operator on signed type. : &amp; used with int: IFG2 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>51 </TD>
+    <TD>Use of bit operator on signed type. : &amp; used with int: =
+UCA0TXIFG=20
+    </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>51 </TD>
+    <TD>Expression is not Boolean. </TD>
+    <TD>MISRA-C:2012 R.10.1,R.14.4 </TD></TR>
+  <TR>
+    <TD align=3Dcenter><A id=3Dfirst_434_s>C</A> </TD>
+    <TD align=3Dcenter>54 </TD>
+    <TD>Signed/unsigned conversion without cast. : (int and unsigned =
+char):=20
+      UCA0TXBUF =3D c </TD>
+    <TD>MISRA-C:2012 R.10.3,R.10.4 =
+</TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#top_of_re=
+p">Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#key_to_te=
+rms">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#procedure=
+_table">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#contents"=
+>Contents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dprint_str_uart_init.c_uart_init.c_4></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT size=3D5><A class=3Dset1=20
+      =
+href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Master\Uart_Init.c=
+&amp;Line=3D60">print_str<BR>(60=20
+      to 65 Uart_Init.c) - FAIL =
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>62 </TD>
+    <TD>Expression is not Boolean. </TD>
+    <TD>MISRA-C:2012 R.10.1,R.14.4 </TD></TR>
+  <TR>
+    <TD align=3Dcenter><A id=3Dfirst_30_s>C</A> </TD>
+    <TD align=3Dcenter>63 </TD>
+    <TD>Deprecated usage of ++ or -- operators found. </TD>
+    <TD>MISRA-C:2012 R.13.1,R.13.2,R.13.3 </TD></TR>
+  <TR>
+    <TD align=3Dcenter><A id=3Dfirst_9_s>C</A> </TD>
+    <TD align=3Dcenter>63 </TD>
+    <TD>Assignment operation in expression. </TD>
+    <TD>MISRA-C:2012 R.13.1,R.13.2,R.13.4=20
+</TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#top_of_re=
+p">Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#key_to_te=
+rms">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#procedure=
+_table">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#contents"=
+>Contents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dadc_init_adc.c_adc.c_1></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#00a000><FONT size=3D5><A class=3Dset1=20
+      =
+href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Master\ADC.c&amp;L=
+ine=3D24">ADC_init<BR>(24=20
+      to 40 ADC.c) - Pass =
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+All=20
+selected standards satisfied </H4><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#top_of_re=
+p">Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#key_to_te=
+rms">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#procedure=
+_table">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#contents"=
+>Contents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dvitesse_moteurs_robotv2.c_robotv2.c_3></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#00a000><FONT size=3D5><A class=3Dset1=20
+      =
+href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Master\robotv2.c&a=
+mp;Line=3D69">Vitesse_moteurs<BR>(69=20
+      to 73 robotv2.c) - Pass =
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+All=20
+selected standards satisfied </H4><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#top_of_re=
+p">Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#key_to_te=
+rms">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#procedure=
+_table">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#contents"=
+>Contents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Darret_robot_robotv2.c_robotv2.c_4></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#00a000><FONT size=3D5><A class=3Dset1=20
+      =
+href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Master\robotv2.c&a=
+mp;Line=3D83">Arret_robot<BR>(83=20
+      to 87 robotv2.c) - Pass =
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+All=20
+selected standards satisfied </H4><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#top_of_re=
+p">Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#key_to_te=
+rms">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#procedure=
+_table">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#contents"=
+>Contents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Ddemarrer_robot_robotv2.c_robotv2.c_5></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#00a000><FONT size=3D5><A class=3Dset1=20
+      =
+href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Master\robotv2.c&a=
+mp;Line=3D98">Demarrer_robot<BR>(98=20
+      to 102 robotv2.c) - Pass =
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+All=20
+selected standards satisfied </H4><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#top_of_re=
+p">Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#key_to_te=
+rms">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#procedure=
+_table">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#contents"=
+>Contents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dkey_to_terms></A><BR>
+<CENTER>
+<H2>Key to Terms </H2></CENTER><BR>
+<H4>Standards violations for procedures are printed in tables with code =
+markers=20
+as follows: </H4><BR>
+<CENTER>
+<TABLE bgColor=3D#d7eded border=3D1>
+  <TBODY>
+  <TR align=3Dcenter>
+    <TH>Code </TH>
+    <TH>(Line) </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR align=3Dcenter>
+    <TD>M </TD>
+    <TD>(Source line number) </TD>
+    <TD>[Text of Mandatory standard] </TD>
+    <TD>[Appropriate rule reference] </TD></TR>
+  <TR align=3Dcenter>
+    <TD>C </TD>
+    <TD>&nbsp;</TD>
+    <TD>[Text of Required standard] </TD>
+    <TD>&nbsp;</TD></TR>
+  <TR align=3Dcenter>
+    <TD>O </TD>
+    <TD>&nbsp;</TD>
+    <TD>[Text of Advisory standard] </TD>
+    <TD>&nbsp;</TD></TR>
+  <TR align=3Dcenter>
+    <TH colSpan=3D4><CODE>[Source: Text of line from Source file]=20
+  </CODE></TH></TR></TBODY></TABLE></CENTER><BR><BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;Required=20
+standards are considered mandatory but individual instances may be =
+overridden by=20
+adding annotations to the source code <BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;Advisory=20
+standards provide additional quality criteria but may be violated =
+<BR><BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;For=20
+some standards violations, additional information is provided in results =
+tables=20
+<BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;Note=20
+that source lines do not show macro expansions <BR><BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;"Off"=20
+in Summary tables indicates that a standard is switched off in the =
+<LANG>pen.dat=20
+file <BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;"MR"=20
+in Summary tables indicates a MISRA Restricted standard which cannot be =
+checked=20
+without the MISRA licence option. <BR><BR><BR>
+<H4>A summary is given of the pass/fail result of each program component =
+as=20
+follows: </H4><BR>
+<CENTER>
+<TABLE bgColor=3D#d7eded>
+  <TBODY>
+  <TR>
+    <TD>Components which pass all standards are marked: </TD>
+    <TD bgColor=3Dgreen ,><FONT color=3Dwhite>Pass </FONT></TD></TR>
+  <TR>
+    <TD>Components which fail only Advisory standards are marked: </TD>
+    <TD bgColor=3Dyellow ,><FONT color=3Dblue>Conditional Pass =
+</FONT></TD></TR>
+  <TR>
+    <TD>Components which fail on insufficient comments only are marked: =
+</TD>
+    <TD bgColor=3Dorange ,><FONT color=3Dblue>Comment FAIL =
+</FONT></TD></TR>
+  <TR>
+    <TD>Components which violate Mandatory standards are marked: </TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>FAIL=20
+</FONT></TD></TR></TBODY></TABLE></CENTER><BR><A =
+id=3Dunq_key></A><BR><BR>
+<H4>Procedure Results table breakdown (Example Only) </H4><BR>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE width=3D"100%" bgColor=3D#ece2e2>
+        <TBODY>
+        <TR>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH></TR>
+        <TR align=3Dleft>
+          <TH colSpan=3D11><TT>Unique Violations </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"49%" colSpan=3D11><TT>Failure Density </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH></TR>
+        <TR align=3Dleft>
+          <TH width=3D"49%" colSpan=3D11><TT>&nbsp; </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH colSpan=3D11><TT>(Viols/R.Line %) </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH></TR>
+        <TR align=3Dleft>
+          <TD bgColor=3D#e17b87 colSpan=3D7>65 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D4><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D11><FONT color=3Dwhite>150 =
+</FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD bgColor=3D#e17b87 colSpan=3D4>35 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D7><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D4>39 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D7><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          =
+<TD></TD></TR></TD></TR></TBODY></TABLE></TR></TBODY></TABLE></CENTER><BR=
+><BR><BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;The=20
+Violation density for a function is the number of violations per =
+reformatted=20
+line, expressed as a percentage. <BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;It=20
+is an indication of code quality. <BR><BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;Functions=20
+with a high violation density are likely to be smaller functions with a =
+large=20
+number of violations. <BR><BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;Lower=20
+density may indicate larger functions with fewer violations. =
+<BR><BR><FONT=20
+color=3D#6571c9>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(nViols=20
+/ nRefLines) x 100 <BR><BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;where:=20
+<BR><BR><FONT=20
+color=3D#6571c9>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nViols=20
+=3D number of standard violations in a function. <BR><BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;and:=20
+<BR><BR><FONT=20
+color=3D#6571c9>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nRefLines=20
+=3D number of reformatted lines in a function. <BR><BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;The=20
+unique standards failure ratio is an indication of variety of standards=20
+violations in a module. <BR><BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;Thus=20
+a function containing one instance of several different standards will =
+have a=20
+high ratio, <BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;while=20
+a function that has violated only one standard will have a low ratio. =
+<BR><BR>
+<HR>
+
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#top_of_re=
+p">Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#procedure=
+_table">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.rps.htm#contents"=
+>Contents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR>
+<CENTER>
+<H3>End of Code Review Report </H3></CENTER>
+<CENTER>
+<H3></H3></CENTER>
+<CENTER>
+<H3>Copyright =A9 2017 Liverpool Data Research Associates </H3></CENTER>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 80%; MARGIN: 0px auto; DISPLAY: =
+block"></DIV></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FO=
+NT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></BODY>=
+</HTML>
+
+------=_NextPart_000_0000_01D3C1DC.0D0F9FD0
+Content-Type: application/javascript
+Content-Transfer-Encoding: 7bit
+Content-Location: file:///C:/LDRA_Workarea/Master_tbwrkfls/imagejs.js
+
+var temp_str ='<img src="file://C:\\LDRA_Toolsuite\\images/';
+var base_str ='<a href="file://C:\\LDRA_Toolsuite\\';
+var ie_ver = getIE_ver();
+function getIE_ver()
+{
+var ret = -1;
+if (navigator.appName == 'Microsoft Internet Explorer')
+{
+var ua = navigator.userAgent;
+var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+if (re.exec(ua) != null)
+{
+ret = parseFloat( RegExp.$1 );
+}
+}
+return ret;
+}
+
+------=_NextPart_000_0000_01D3C1DC.0D0F9FD0--

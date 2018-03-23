@@ -1,0 +1,575 @@
+From: =?Windows-1252?Q?Enregistr=E9_par_Internet_Explorer=A011?=
+Subject: Test Manager
+Date: Thu, 22 Mar 2018 12:47:42 +0100
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01D3C1DB.F7A79530"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.23651
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01D3C1DB.F7A79530
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://C:\LDRA_Workarea\Master_tbwrkfls\Master.ovs.htm
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><META content=3D"IE=3D7.0000" =
+http-equiv=3D"X-UA-Compatible">
+<TITLE>Test Manager</TITLE>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3DContent-Type>
+<STYLE type=3Dtext/css>.orag-line {
+	BACKGROUND-COLOR: #ff7b42
+}
+.break {
+	BACKGROUND-COLOR: #ff7b42
+}
+.blue-line {
+	BACKGROUND-COLOR: #000080
+}
+.break-p {
+	BACKGROUND-COLOR: #000084
+}
+.break-p {
+	border-radius: 10px
+}
+.break {
+	border-radius: 10px
+}
+DIV {
+	PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; =
+PADDING-RIGHT: 0px
+}
+H2 {
+	TEXT-ALIGN: center
+}
+H3 {
+	TEXT-ALIGN: center
+}
+.header {
+	TEXT-ALIGN: center
+}
+TABLE TD {
+	TEXT-ALIGN: left
+}
+TABLE {
+	MARGIN: auto
+}
+P.pagebreak {
+	PAGE-BREAK-BEFORE: always
+}
+P.nopagebreak {
+=09
+}
+P.shiftleft {
+	MARGIN-LEFT: -54pt
+}
+UL {
+	PADDING-LEFT: 20px
+}
+BR.pagebreak {
+	PAGE-BREAK-BEFORE: always
+}
+</STYLE>
+
+<SCRIPT type=3Dtext/javascript>
+function checkPath (elm) {
+  if(window.parent !=3D undefined) {
+    if(window.parent.TBpublish !=3D undefined) {
+      var link =3D elm.getAttribute('href');
+      var parts =3D link.split('/');
+      if(parts.length =3D=3D 1)
+      {
+        parts =3D link.split('\\');
+      }
+      link =3D elm.getAttribute('id') + '/' + parts[parts.length-1];
+      elm.setAttribute('href', link);
+    }
+  }
+}
+</SCRIPT>
+
+<SCRIPT language=3DJavascript=20
+src=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/imagejs.js">=20
+// -->
+</SCRIPT>
+
+<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.18860"></HEAD>
+<BODY bgColor=3D#fffff2>
+<DIV class=3Dbreak=20
+style=3D"HEIGHT: 10px; WIDTH: 80%; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><A=20
+id=3Dtop_of_rep></A><BR>
+<STYLE type=3Dtext/css>A.set1:link {
+	TEXT-DECORATION: none; BACKGROUND: none transparent scroll repeat 0% =
+0%; COLOR: #fbfcc8
+}
+A.set1:visited {
+	TEXT-DECORATION: none; BACKGROUND: none transparent scroll repeat 0% =
+0%; COLOR: #fbfcc8
+}
+A.set1:active {
+	TEXT-DECORATION: none; BACKGROUND: none transparent scroll repeat 0% =
+0%; COLOR: #fbfcc8
+}
+A:link {
+	TEXT-DECORATION: none; BACKGROUND: none transparent scroll repeat 0% =
+0%; COLOR: blue
+}
+A:visited {
+	TEXT-DECORATION: none; BACKGROUND: none transparent scroll repeat 0% =
+0%; COLOR: blue
+}
+A:active {
+	TEXT-DECORATION: none; BACKGROUND: none transparent scroll repeat 0% =
+0%; COLOR: blue
+}
+</STYLE>
+
+<CENTER><FONT size=3D9><B>LDRA Testbed =AE Test Manager Report =
+</FONT></B></CENTER>
+<CENTER><FONT size=3D9><B></FONT></B></CENTER>
+<CENTER>
+<H1>Set : Master </H1></CENTER><BR><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#d7eded border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Report Production </TH>
+    <TH>Report Configuration </TH></TR>
+  <TR>
+    <TD>
+      <UL>
+        <LI>C/C++ LDRA Testbed Version: 9.7.0</LI></UL></TD>
+    <TD>
+      <UL>
+        <LI>Report Format: By Result
+        <LI>Reporting Scope: Source file and associated=20
+  header</LI></UL></TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><A=20
+id=3Dstandards_table></A><BR>
+<CENTER>
+<H2>Code Review Report </H2></CENTER><BR>
+<CENTER>
+<TABLE width=3D"80%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE width=3D"100%" bgColor=3D#ece2e2>
+        <TBODY>
+        <TR>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH></TR>
+        <TR align=3Dleft>
+          <TH colSpan=3D11><TT>&nbsp; </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"19%" colSpan=3D11><TT>Quality Result </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"19%" colSpan=3D11><TT>Uniq Violations </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"19%" colSpan=3D11><TT>No in Function </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"19%" colSpan=3D11><TT>Breakdown </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH></TR>
+        <TR align=3Dleft>
+          <TH colSpan=3D22><TT>&nbsp; </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"19%" colSpan=3D11><TT>% in Function </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"19%" colSpan=3D11><TT>&nbsp; </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"19%" colSpan=3D11><TT>of Violations </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11>&nbsp; </TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><U>Master (Set) </U></TD>
+          <TD></TD>
+          <TD colSpan=3D11><FONT color=3D#ff0000>Fail </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><FONT color=3D#535653>5 Files | 18 Functions =
+</FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><FONT color=3D#535653>Unique violations - 24 =
+</FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><FONT color=3D#535653>4-M 20-C </FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11>&nbsp; </TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11>Uart_Init.c </TD>
+          <TD></TD>
+          <TD colSpan=3D11><FONT color=3D#ff0000>Fail </FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D4>33 </TD>
+          <TD bgColor=3D#e17b87 colSpan=3D7><FONT color=3D#e17b87>- =
+</FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><FONT color=3D#a39f9f>Unique violations - 8 =
+</FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><FONT color=3D#a39f9f>8-C </FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11>SPI_Init.c </TD>
+          <TD></TD>
+          <TD colSpan=3D11><FONT color=3D#ff0000>Fail </FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a>8 </TD>
+          <TD bgColor=3D#e17b87 colSpan=3D10><FONT color=3D#e17b87>- =
+</FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><FONT color=3D#a39f9f>Unique violations - 2 =
+</FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><FONT color=3D#a39f9f>1-M 1-C </FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11>robotv2.c </TD>
+          <TD></TD>
+          <TD colSpan=3D11><FONT color=3D#ff0000>Fail </FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D2>17 </TD>
+          <TD bgColor=3D#e17b87 colSpan=3D9><FONT color=3D#e17b87>- =
+</FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><FONT color=3D#a39f9f>Unique violations - 4 =
+</FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><FONT color=3D#a39f9f>1-M 3-C </FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11>main.c </TD>
+          <TD></TD>
+          <TD colSpan=3D11><FONT color=3D#ff0000>Fail </FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D3>25 </TD>
+          <TD bgColor=3D#e17b87 colSpan=3D8><FONT color=3D#e17b87>- =
+</FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><FONT color=3D#a39f9f>Unique violations - 6 =
+</FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><FONT color=3D#a39f9f>2-M 4-C </FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11>ADC.c </TD>
+          <TD></TD>
+          <TD colSpan=3D11><FONT color=3D#ff0000>Fail </FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D2>17 </TD>
+          <TD bgColor=3D#e17b87 colSpan=3D9><FONT color=3D#e17b87>- =
+</FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><FONT color=3D#a39f9f>Unique violations - 4 =
+</FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><FONT color=3D#a39f9f>4-C </FONT></TD>
+          =
+<TD></TD></TR></TD></TR></TBODY></TABLE></TR></TBODY></TABLE></CENTER><BR=
+>
+<DIV class=3Dbreak=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><A=20
+id=3Dmetrics_table></A><BR>
+<CENTER>
+<H2>Quality Review Report </H2></CENTER><BR>
+<CENTER>
+<TABLE width=3D"80%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE width=3D"100%" bgColor=3D#ece2e2>
+        <TBODY>
+        <TR>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH></TR>
+        <TR>
+          <TH colSpan=3D11><TT>&nbsp; </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"19%" colSpan=3D11><TT>Testability </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"19%" colSpan=3D11><TT>Maintainability </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"19%" colSpan=3D11><TT>Clarity </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"19%" colSpan=3D11><TT>All Metrics </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH></TR>
+        <TR>
+          <TH width=3D"99%" colSpan=3D55><TT>&nbsp; </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"1%">&nbsp;</TH></TR>
+        <TR>
+          <TD colSpan=3D11>&nbsp; </TD>
+          <TD></TD></TR>
+        <TR>
+          <TD colSpan=3D11><U>Master (Set) </U></TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D11><FONT color=3Dwhite>100 =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D11><FONT color=3Dwhite>100 =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#afe1ab colSpan=3D9>89 </TD>
+          <TD bgColor=3D#e17b87 colSpan=3D2><FONT color=3D#e17b87>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#afe1ab colSpan=3D10>95 </TD>
+          <TD bgColor=3D#e17b87><FONT color=3D#e17b87>- </FONT></TD>
+          <TD></TD></TR>
+        <TR>
+          <TD colSpan=3D11>&nbsp; </TD>
+          <TD></TD></TR>
+        <TR>
+          <TD colSpan=3D11>Uart_Init.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D11><FONT color=3Dwhite>100 =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D11><FONT color=3Dwhite>100 =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#afe1ab colSpan=3D9>86 </TD>
+          <TD bgColor=3D#e17b87 colSpan=3D2><FONT color=3D#e17b87>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#afe1ab colSpan=3D10>93 </TD>
+          <TD bgColor=3D#e17b87><FONT color=3D#e17b87>- </FONT></TD>
+          <TD></TD></TR>
+        <TR>
+          <TD colSpan=3D11>SPI_Init.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D11><FONT color=3Dwhite>100 =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D11><FONT color=3Dwhite>100 =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#afe1ab colSpan=3D9>86 </TD>
+          <TD bgColor=3D#e17b87 colSpan=3D2><FONT color=3D#e17b87>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#afe1ab colSpan=3D10>93 </TD>
+          <TD bgColor=3D#e17b87><FONT color=3D#e17b87>- </FONT></TD>
+          <TD></TD></TR>
+        <TR>
+          <TD colSpan=3D11>robotv2.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D11><FONT color=3Dwhite>100 =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D11><FONT color=3Dwhite>100 =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#afe1ab colSpan=3D9>86 </TD>
+          <TD bgColor=3D#e17b87 colSpan=3D2><FONT color=3D#e17b87>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#afe1ab colSpan=3D10>95 </TD>
+          <TD bgColor=3D#e17b87><FONT color=3D#e17b87>- </FONT></TD>
+          <TD></TD></TR>
+        <TR>
+          <TD colSpan=3D11>main.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D11><FONT color=3Dwhite>100 =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D11><FONT color=3Dwhite>100 =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#afe1ab colSpan=3D10>93 </TD>
+          <TD bgColor=3D#e17b87><FONT color=3D#e17b87>- </FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#afe1ab colSpan=3D10>98 </TD>
+          <TD bgColor=3D#e17b87><FONT color=3D#e17b87>- </FONT></TD>
+          <TD></TD></TR>
+        <TR>
+          <TD colSpan=3D11>ADC.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D11><FONT color=3Dwhite>100 =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D11><FONT color=3Dwhite>100 =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#afe1ab colSpan=3D10>93 </TD>
+          <TD bgColor=3D#e17b87><FONT color=3D#e17b87>- </FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#afe1ab colSpan=3D10>98 </TD>
+          <TD bgColor=3D#e17b87><FONT color=3D#e17b87>- </FONT></TD>
+          =
+<TD></TD></TR></TD></TR></TBODY></TABLE></TR></TBODY></TABLE></CENTER><BR=
+>
+<DIV class=3Dbreak=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/Master_tbwrkfls/Master.ovs.htm#top_of_re=
+p">Top=20
+      of Report</A> </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR>
+<CENTER>
+<H3>End of Test Manager Report </H3></CENTER>
+<CENTER>
+<H3></H3></CENTER>
+<CENTER>
+<H3>Copyright =A9 2017 Liverpool Data Research Associates </H3></CENTER>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 80%; MARGIN: 0px auto; DISPLAY: =
+block"></DIV></BODY></HTML>
+
+------=_NextPart_000_0000_01D3C1DB.F7A79530
+Content-Type: application/javascript
+Content-Transfer-Encoding: 7bit
+Content-Location: file:///C:/LDRA_Workarea/Master_tbwrkfls/imagejs.js
+
+var temp_str ='<img src="file://C:\\LDRA_Toolsuite\\images/';
+var base_str ='<a href="file://C:\\LDRA_Toolsuite\\';
+var ie_ver = getIE_ver();
+function getIE_ver()
+{
+var ret = -1;
+if (navigator.appName == 'Microsoft Internet Explorer')
+{
+var ua = navigator.userAgent;
+var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+if (re.exec(ua) != null)
+{
+ret = parseFloat( RegExp.$1 );
+}
+}
+return ret;
+}
+
+------=_NextPart_000_0000_01D3C1DB.F7A79530--

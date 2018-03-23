@@ -1,0 +1,1895 @@
+From: =?Windows-1252?Q?Enregistr=E9_par_Internet_Explorer=A011?=
+Subject: LDRA Testbed Code Review Report
+Date: Thu, 22 Mar 2018 12:50:38 +0100
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01D3C1DC.60AE5500"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.23651
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01D3C1DC.60AE5500
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://C:\LDRA_Workarea\slave_tbwrkfls\slave.rps.htm
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><META content=3D"IE=3D7.0000" =
+http-equiv=3D"X-UA-Compatible">
+<TITLE>LDRA Testbed Code Review Report</TITLE>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3DContent-Type>
+<STYLE type=3Dtext/css>.orag-line {
+	BACKGROUND-COLOR: #ff7b42
+}
+.break {
+	BACKGROUND-COLOR: #ff7b42
+}
+.blue-line {
+	BACKGROUND-COLOR: #000080
+}
+.break-p {
+	BACKGROUND-COLOR: #000084
+}
+.break-p {
+	border-radius: 10px
+}
+.break {
+	border-radius: 10px
+}
+DIV {
+	PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; =
+PADDING-RIGHT: 0px
+}
+H2 {
+	TEXT-ALIGN: center
+}
+H3 {
+	TEXT-ALIGN: center
+}
+.header {
+	TEXT-ALIGN: center
+}
+TABLE TD {
+	TEXT-ALIGN: left
+}
+TABLE {
+	MARGIN: auto
+}
+P.pagebreak {
+	PAGE-BREAK-BEFORE: always
+}
+P.nopagebreak {
+=09
+}
+P.shiftleft {
+	MARGIN-LEFT: -54pt
+}
+UL {
+	PADDING-LEFT: 20px
+}
+BR.pagebreak {
+	PAGE-BREAK-BEFORE: always
+}
+</STYLE>
+
+<SCRIPT language=3DJavascript>
+
+function popup(mylink, windowname)
+{
+if (! window.focus && window.opener)
+{
+return true;
+}
+var href;
+var temp;
+if (typeof(mylink)=3D=3D'string')
+{
+href=3Dmylink;
+}
+else
+{
+href=3Dmylink.href;
+temp =3D window.open(href, windowname, 'width=3D600,        =
+height=3D300,scrollbars=3Dyes');
+temp.focus();
+return false;
+}
+}
+function targetopener(mylink, closeme, closeonly)
+{
+if (! (window.focus && window.opener))     return true;
+if (! closeonly)                                 =
+window.opener.location.href=3Dmylink.href;
+window.blur();
+window.opener.focus();
+if (closeme)                                    window.close();
+return false;
+return false;
+}
+
+</SCRIPT>
+
+<SCRIPT language=3DJavascript=20
+src=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/imagejs.js">=20
+// -->
+</SCRIPT>
+
+<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.18860"></HEAD>
+<BODY bgColor=3D#fffff2>
+<DIV class=3Dbreak=20
+style=3D"HEIGHT: 10px; WIDTH: 80%; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><A=20
+id=3Dtop_of_rep></A><BR>
+<STYLE type=3Dtext/css>A.set1:link {
+	TEXT-DECORATION: none; BACKGROUND: none transparent scroll repeat 0% =
+0%; COLOR: #fbfcc8
+}
+A.set1:visited {
+	TEXT-DECORATION: none; BACKGROUND: none transparent scroll repeat 0% =
+0%; COLOR: #fbfcc8
+}
+A.set1:active {
+	TEXT-DECORATION: none; BACKGROUND: none transparent scroll repeat 0% =
+0%; COLOR: #fbfcc8
+}
+A:link {
+	TEXT-DECORATION: none; BACKGROUND: none transparent scroll repeat 0% =
+0%; COLOR: blue
+}
+A:visited {
+	TEXT-DECORATION: none; BACKGROUND: none transparent scroll repeat 0% =
+0%; COLOR: blue
+}
+A:active {
+	TEXT-DECORATION: none; BACKGROUND: none transparent scroll repeat 0% =
+0%; COLOR: blue
+}
+</STYLE>
+
+<CENTER><FONT size=3D9><B>LDRA Testbed =AE Code Review Report =
+</FONT></B></CENTER>
+<CENTER><FONT size=3D9><B></FONT></B></CENTER>
+<CENTER>
+<H1>Group : slave </H1></CENTER><BR><BR><BR><BR>
+<HR width=3D"100%">
+
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT color=3D#fbfcc8 size=3D5>Overall Result: =
+FAIL=20
+    </FONT></TH></TR></TBODY></TABLE></CENTER>
+<HR width=3D"100%">
+<BR><BR><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR>
+<CENTER>
+<TABLE width=3D"80%" bgColor=3D#d7eded border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Report Production </TH>
+    <TH>Report Configuration </TH>
+    <TH>Analysis phases </TH></TR>
+  <TR>
+    <TD>
+      <UL>
+        <LI>C/C++ LDRA Testbed Version: 9.7.0
+        <LI>Produced On: Thu Mar 22 2018 at 12:50:19
+        <LI>Generated from GLH Repository</LI></UL></TD>
+    <TD>
+      <UL>
+        <LI>Report Level: Summary Report
+        <LI>Procedures Reported: All Procedures
+        <LI>Programming Standards Model: MISRA-C:2012
+        <LI>Line Numbers refer to: Original Source File
+        <LI>Violation Details: Violations Only
+        <LI>Reporting Scope: Source file and associated =
+header</LI></UL></TD>
+    <TD>
+      <UL>
+        <LI>Static: Yes
+        <LI>Complexity: Yes
+        <LI>Static Data Flow: Yes
+        <LI>Information Flow: No
+        <LI>Cross Reference: =
+Yes</LI></UL></TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV>
+<H4><A id=3Dcontents>Contents </A></H4>Overall Code Review Summary <BR>
+<UL>
+  <LI>Totals of Violations for each Standard <BR>
+  <LI><A=20
+  =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#procedure_t=
+able">Table=20
+  of Procedure Results </A><BR>
+  <LI><A=20
+  =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#source_file=
+_table">Table=20
+  of Source Files in Group </A><BR>
+  <LI>Table of Global Basic Information <BR><BR></LI></UL><A=20
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#procedure_r=
+eports">Report=20
+on Program Components </A><BR>
+<UL>
+  <LI>Code Review Results Global Program and Selected Procedures=20
+<BR><BR></LI></UL><A=20
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#key_to_term=
+s">Key to=20
+Terms </A><BR>
+<HR>
+<BR><BR><BR><BR>
+<CENTER>
+<H2>Overall Code Review Summary</H2></CENTER><BR><BR>
+<H4>Totals for Violated Code Review Standards </H4><BR>
+<CENTER>
+<TABLE width=3D"80%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Number of Violations </TH>
+    <TH>LDRA Code </TH>
+    <TH>Mandatory Standards </TH>
+    <TH>MISRA-C:2012 Code </TH></TR>
+  <TR>
+    <TD bgColor=3D#ff8181 align=3Dcenter ,><FONT color=3Dblue>
+      <CENTER><A onclick=3D'return popup(this, "knotes")'=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave_link_popup496S.htm"=
+>8</A>=20
+      </CENTER></FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>496 S </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/standards.htm#standard_s496">') + =
+document.write('Function call with no prior declaration.') + =
+document.write('</a>') </SCRIPT>
+      </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/misra-c_2012_model.htm#rule_misra-c%3A2012_r.17.3">'=
+) + document.write('MISRA-C:2012 R.17.3') + document.write('</a>') =
+</SCRIPT>
+      </FONT></TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE width=3D"80%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Number of Violations </TH>
+    <TH>LDRA Code </TH>
+    <TH>Required Standards </TH>
+    <TH>MISRA-C:2012 Code </TH></TR>
+  <TR>
+    <TD bgColor=3D#ff8181 align=3Dcenter ,><FONT color=3Dblue>
+      <CENTER><A onclick=3D'return popup(this, "knotes")'=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave_link_popup101S.htm"=
+>1</A>=20
+      </CENTER></FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>101 S </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/standards.htm#standard_s101">') + =
+document.write('Function return type inconsistent.') + =
+document.write('</a>') </SCRIPT>
+      </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/misra-c_2012_model.htm#rule_misra-c%3A2012_r.10.3">'=
+) + document.write('MISRA-C:2012 R.10.3') + document.write('</a>') =
+</SCRIPT>
+      </FONT></TD></TR>
+  <TR>
+    <TD bgColor=3D#ff8181 align=3Dcenter ,><FONT color=3Dblue>
+      <CENTER><A onclick=3D'return popup(this, "knotes")'=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave_link_popup120S.htm"=
+>32</A>=20
+      </CENTER></FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>120 S </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/standards.htm#standard_s120">') + =
+document.write('Use of bit operator on signed type.') + =
+document.write('</a>') </SCRIPT>
+      </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/misra-c_2012_model.htm#rule_misra-c%3A2012_r.10.1">'=
+) + document.write('MISRA-C:2012 R.10.1') + document.write('</a>') =
+</SCRIPT>
+      </FONT></TD></TR>
+  <TR>
+    <TD bgColor=3D#ff8181 align=3Dcenter ,><FONT color=3Dblue>
+      <CENTER><A onclick=3D'return popup(this, "knotes")'=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave_link_popup8D.htm">1=
+</A>=20
+      </CENTER></FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>8 D </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/standards.htm#standard_d8">') + document.write('DD =
+data flow anomalies found.') + document.write('</a>') </SCRIPT>
+      </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/misra-c_2012_model.htm#rule_misra-c%3A2012_r.2.2">')=
+ + document.write('MISRA-C:2012 R.2.2') + document.write('</a>') =
+</SCRIPT>
+      </FONT></TD></TR>
+  <TR>
+    <TD bgColor=3D#ff8181 align=3Dcenter ,><FONT color=3Dblue>
+      <CENTER><A onclick=3D'return popup(this, "knotes")'=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave_link_popup28D.htm">=
+1</A>=20
+      </CENTER></FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>28 D </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/standards.htm#standard_d28">') + =
+document.write('Potentially infinite loop found.') + =
+document.write('</a>') </SCRIPT>
+      </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/misra-c_2012_model.htm#rule_misra-c%3A2012_r.2.1">')=
+ + document.write('MISRA-C:2012 R.2.1') + document.write('</a>') =
+</SCRIPT>
+      </FONT></TD></TR>
+  <TR>
+    <TD bgColor=3D#ff8181 align=3Dcenter ,><FONT color=3Dblue>
+      <CENTER><A onclick=3D'return popup(this, "knotes")'=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave_link_popup65D.htm">=
+3</A>=20
+      </CENTER></FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>65 D </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/standards.htm#standard_d65">') + =
+document.write('Void function has no side effects.') + =
+document.write('</a>') </SCRIPT>
+      </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/misra-c_2012_model.htm#rule_misra-c%3A2012_r.2.2">')=
+ + document.write('MISRA-C:2012 R.2.2') + document.write('</a>') =
+</SCRIPT>
+      </FONT></TD></TR>
+  <TR>
+    <TD bgColor=3D#ff8181 align=3Dcenter ,><FONT color=3Dblue>
+      <CENTER><A onclick=3D'return popup(this, "knotes")'=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave_link_popup76D.htm">=
+1</A>=20
+      </CENTER></FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>76 D </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/standards.htm#standard_d76">') + =
+document.write('Procedure is not called or referenced in code =
+analysed.') + document.write('</a>') </SCRIPT>
+      </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/misra-c_2012_model.htm#rule_misra-c%3A2012_r.2.1">')=
+ + document.write('MISRA-C:2012 R.2.1') + document.write('</a>') =
+</SCRIPT>
+      </FONT></TD></TR>
+  <TR>
+    <TD bgColor=3D#ff8181 align=3Dcenter ,><FONT color=3Dblue>
+      <CENTER><A onclick=3D'return popup(this, "knotes")'=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave_link_popup106D.htm"=
+>3</A>=20
+      </CENTER></FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>106 D </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/standards.htm#standard_d106">') + =
+document.write('No prototype for non-static function.') + =
+document.write('</a>') </SCRIPT>
+      </FONT></TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/misra-c_2012_model.htm#rule_misra-c%3A2012_r.8.4">')=
+ + document.write('MISRA-C:2012 R.8.4') + document.write('</a>') =
+</SCRIPT>
+      </FONT></TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE width=3D"80%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Number of Violations </TH>
+    <TH>LDRA Code </TH>
+    <TH>Advisory Standards </TH>
+    <TH>MISRA-C:2012 Code </TH></TR></TBODY></TABLE></CENTER><BR>No =
+Advisory=20
+Standards Violated <BR><BR>
+<CENTER>
+<TABLE width=3D"80%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Number of Violations </TH>
+    <TH>LDRA Code </TH>
+    <TH>Document Standards </TH>
+    <TH>MISRA-C:2012 Code </TH></TR>
+  <TR>
+    <TD bgColor=3Dgreen align=3Dcenter ,><FONT color=3Dwhite>
+      <CENTER><A onclick=3D'return popup(this, "knotes")'=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave_link_popup69S.htm">=
+1</A>=20
+      </CENTER></FONT></TD>
+    <TD bgColor=3Dgreen ,><FONT color=3Dwhite>69 S </FONT></TD>
+    <TD bgColor=3Dgreen ,><FONT color=3Dwhite>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/standards.htm#standard_s69">') + =
+document.write('#pragma used.') + document.write('</a>') </SCRIPT>
+      </FONT></TD>
+    <TD bgColor=3Dgreen ,><FONT color=3Dwhite>
+      <SCRIPT language=3Djavascript> document.write(base_str + =
+'standards_info/html/misra-c_2012_model.htm#rule_misra-c%3A2012_d.1.1">')=
+ + document.write('MISRA-C:2012 D.1.1') + document.write('</a>') =
+</SCRIPT>
+      </FONT></TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE width=3D"80%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TD>Number of Mandatory Standards checked </TD>
+    <TD align=3Dcenter>23 </TD></TR>
+  <TR>
+    <TD>Number of Required Standards checked </TD>
+    <TD align=3Dcenter>302 </TD></TR>
+  <TR>
+    <TD>Number of Advisory Standards checked </TD>
+    <TD align=3Dcenter>33 </TD></TR>
+  <TR>
+    <TD>Number of Document Standards checked </TD>
+    <TD align=3Dcenter>3 </TD></TR>
+  <TR>
+    <TD>Total Standards checked </TD>
+    <TD align=3Dcenter>358 </TD></TR>
+  <TR>
+    <TD>Total Standards checked including Document </TD>
+    <TD align=3Dcenter>361 =
+</TD></TR></TBODY></TABLE></CENTER><BR><BR><BR>
+<P class=3Dpagebreak><BR>
+<P><BR>
+<HR width=3D"100%">
+<FONT color=3D#ff0000>
+<CENTER>
+<H3>OVERALL RESULT: FAIL</H3></CENTER></FONT>
+<HR width=3D"100%">
+<BR><A id=3Dprocedure_table></A><BR>Out of 10 program components, 2 =
+(20.00 %) pass=20
+( of which 0 conditionally pass ) and 8 fail ( of which 0 fail only =
+because of=20
+insufficient comments ) <BR><BR>
+<H4>Procedure Results </H4>
+<CENTER>
+<TABLE width=3D"80%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE width=3D"100%" bgColor=3D#ece2e2>
+        <TBODY>
+        <TR>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH></TR>
+        <TR align=3Dleft>
+          <TH colSpan=3D11><TT>Code Review Result </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"19%" colSpan=3D11><TT>Procedure </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"19%" colSpan=3D11><TT>Source File </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"19%" colSpan=3D11><TT><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#unq_key">Un=
+ique=20
+            Violations</A> </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"19%" colSpan=3D11><TT><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#unq_key">Fa=
+ilure=20
+            Density</A> </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH></TR>
+        <TR align=3Dleft>
+          <TH width=3D"79%" colSpan=3D44><TT>&nbsp; </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH colSpan=3D11><TT>(Viols/R.Line %) </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#global_prog=
+">Global=20
+            Program</A> </TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#008000>Pass </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#motor_ir_in=
+it_driver_motor_ir.c_driver_motor_ir.c_1">Motor_IR_Init</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>Driver_Motor_IR.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D11>0 </TD>
+          <TD></TD>
+          <TD bgColor=3D#5fc05a colSpan=3D11>0 </TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#motor_pwm_i=
+nit_driver_motor_ir.c_driver_motor_ir.c_2">Motor_PWM_Init</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>Driver_Motor_IR.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D2>11 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D9><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D5>44 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D6><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#motor_stop_=
+driver_motor_ir.c_driver_motor_ir.c_3">Motor_Stop</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>Driver_Motor_IR.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D2>11 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D9><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D11><FONT color=3Dwhite>100 =
+</FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#motor_start=
+_driver_motor_ir.c_driver_motor_ir.c_4">Motor_Start</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>Driver_Motor_IR.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D2>11 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D9><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D11><FONT color=3Dwhite>125 =
+</FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#motor_set_d=
+eg_driver_motor_ir.c_driver_motor_ir.c_5">Motor_Set_Deg</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>Driver_Motor_IR.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87>5 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D10><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87>2 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D10><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#main_main.c=
+_main.c_1">main</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>main.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D2>11 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D9><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D5>48 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D6><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#usci0rx_isr=
+_main.c_main.c_2">USCI0RX_ISR</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>main.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D2>16 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D9><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D2>16 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D9><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#init_spi_sp=
+i_init.c_spi_init.c_1">Init_SPI</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>SPI_Init.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D2>16 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D9><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D11><FONT color=3Dwhite>156 =
+</FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD colSpan=3D11><FONT color=3D#ff0000>FAIL </FONT></TD>
+          <TD></TD>
+          <TD colSpan=3D11><A=20
+            =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#rx_data_spi=
+_init.c_spi_init.c_2">RX_Data</A>=20
+          </TD>
+          <TD></TD>
+          <TD colSpan=3D11>SPI_Init.c </TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D3>21 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D8><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D6>50 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D5><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          =
+<TD></TD></TR></TD></TR></TBODY></TABLE></TR></TBODY></TABLE></CENTER><BR=
+><BR>
+<H4><A id=3Dglobal_prog>Global Information </A></H4>
+<H4><A id=3Dsource_file_table>Source Files in Group </A></H4>
+<CENTER>
+<TABLE width=3D"80%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Name </TH>
+    <TH>Last Modification Date </TH></TR>
+  <TR>
+    <TD><FONT>C:\Users\z.li.14\Desktop\Nouveau dossier\main.c =
+</FONT></TD>
+    <TD>Wed Mar 21 10:17:18 2018 </TD></TR>
+  <TR>
+    <TD><FONT>C:\Users\z.li.14\Desktop\Nouveau dossier\SPI_Init.c =
+</FONT></TD>
+    <TD>Wed Mar 21 09:40:34 2018 </TD></TR>
+  <TR>
+    <TD><FONT>C:\Users\z.li.14\Desktop\Nouveau dossier\Driver_Motor_IR.c =
+
+      </FONT></TD>
+    <TD>Wed Mar 21 10:29:12 2018 </TD></TR></TBODY></TABLE></CENTER><BR>
+<HR>
+<BR><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Global=20
+Basic Information </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TD>Number of procedures: </TD>
+    <TD align=3Dcenter>9 </TD></TR>
+  <TR>
+    <TD>Number of locally uncalled procedures: </TD>
+    <TD align=3Dcenter>1 </TD></TR>
+  <TR>
+    <TD>Maximum loop depth: </TD>
+    <TD align=3Dcenter>1 </TD></TR>
+  <TR>
+    <TD>Total Cyclomatic Complexity: </TD>
+    <TD align=3Dcenter>13 </TD></TR>
+  <TR>
+    <TD>Number of reformatted executable lines: </TD>
+    <TD align=3Dcenter>168 </TD></TR>
+  <TR>
+    <TD>Number of lines of comments: </TD>
+    <TD align=3Dcenter>134 </TD></TR></TBODY></TABLE></CENTER><BR>
+<HR>
+<A id=3Dprocedure_reports></A><BR>
+<CENTER>
+<H2>Summary Report on all Program Components</H2></CENTER><BR><BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#00a000><FONT color=3D#fbfcc8 size=3D5>Globals / code =
+outside=20
+      procedures - Pass </FONT></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary - All files </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>File: Src Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter><A id=3Dfirst_69_s>I</A> </TD>
+    <TD>main.c: 54 </TD>
+    <TD>#pragma used. </TD>
+    <TD>MISRA-C:2012 D.1.1 </TD></TR></TBODY></TABLE></CENTER><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#top_of_rep"=
+>Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#key_to_term=
+s">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#procedure_t=
+able">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#contents">C=
+ontents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dmotor_pwm_init_driver_motor_ir.c_driver_motor_ir.c_2></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT size=3D5><A class=3Dset1=20
+      href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Nouveau =
+dossier\Driver_Motor_IR.c&amp;Line=3D39">Motor_PWM_Init<BR>(39=20
+      to 48 Driver_Motor_IR.c) - FAIL=20
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter>M </TD>
+    <TD align=3Dcenter>47 </TD>
+    <TD>Function call with no prior declaration. : __enable_interrupt =
+</TD>
+    <TD>MISRA-C:2012 R.17.3 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>42 </TD>
+    <TD>Use of bit operator on signed type. : | used with int: TASSEL_2 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>42 </TD>
+    <TD>Use of bit operator on signed type. : | used with int: MC_1 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>42 </TD>
+    <TD>Use of bit operator on signed type. : | used with int: ID_0 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#top_of_rep"=
+>Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#key_to_term=
+s">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#procedure_t=
+able">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#contents">C=
+ontents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dmotor_stop_driver_motor_ir.c_driver_motor_ir.c_3></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT size=3D5><A class=3Dset1=20
+      href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Nouveau =
+dossier\Driver_Motor_IR.c&amp;Line=3D59">Motor_Stop<BR>(59=20
+      to 61 Driver_Motor_IR.c) - FAIL=20
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>60 </TD>
+    <TD>Use of bit operator on signed type. : &amp;=3D used with int: =
+P1DIR </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>60 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: ( BIT2 ) =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>59 </TD>
+    <TD>Void function has no side effects. : Motor_Stop </TD>
+    <TD>MISRA-C:2012 R.2.2 </TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#top_of_rep"=
+>Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#key_to_term=
+s">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#procedure_t=
+able">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#contents">C=
+ontents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dmotor_start_driver_motor_ir.c_driver_motor_ir.c_4></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT size=3D5><A class=3Dset1=20
+      href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Nouveau =
+dossier\Driver_Motor_IR.c&amp;Line=3D71">Motor_Start<BR>(71=20
+      to 74 Driver_Motor_IR.c) - FAIL=20
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>72 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: P1SEL =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>72 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: BIT2 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>73 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: P1DIR =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>73 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: BIT2 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>71 </TD>
+    <TD>Void function has no side effects. : Motor_Start </TD>
+    <TD>MISRA-C:2012 R.2.2 </TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#top_of_rep"=
+>Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#key_to_term=
+s">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#procedure_t=
+able">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#contents">C=
+ontents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dmotor_set_deg_driver_motor_ir.c_driver_motor_ir.c_5></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT size=3D5><A class=3Dset1=20
+      href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Nouveau =
+dossier\Driver_Motor_IR.c&amp;Line=3D86">Motor_Set_Deg<BR>(86=20
+      to 110 Driver_Motor_IR.c) - FAIL=20
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter><A id=3Dfirst_8_d>C</A> </TD>
+    <TD align=3Dcenter>86 </TD>
+    <TD>DD data flow anomalies found. </TD>
+    <TD>MISRA-C:2012 R.2.2 </TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#top_of_rep"=
+>Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#key_to_term=
+s">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#procedure_t=
+able">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#contents">C=
+ontents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dmain_main.c_main.c_1></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT size=3D5><A class=3Dset1=20
+      href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Nouveau =
+dossier\main.c&amp;Line=3D17">main<BR>(17=20
+      to 46 main.c) - FAIL =
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter>M </TD>
+    <TD align=3Dcenter>24 </TD>
+    <TD>Function call with no prior declaration. : __bis_SR_register =
+</TD>
+    <TD>MISRA-C:2012 R.17.3 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>M </TD>
+    <TD align=3Dcenter>44 </TD>
+    <TD>Function call with no prior declaration. : __delay_cycles </TD>
+    <TD>MISRA-C:2012 R.17.3 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>M </TD>
+    <TD align=3Dcenter>45 </TD>
+    <TD>Function call with no prior declaration. : __bis_SR_register =
+</TD>
+    <TD>MISRA-C:2012 R.17.3 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>20 </TD>
+    <TD>Use of bit operator on signed type. : | used with int: WDTPW =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>20 </TD>
+    <TD>Use of bit operator on signed type. : | used with int: WDTHOLD =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>31 </TD>
+    <TD>Use of bit operator on signed type. : | used with int: 0 </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>31 </TD>
+    <TD>Use of bit operator on signed type. : | used with int: =
+CALDCO_1MHZ </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>39 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: P1DIR =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>39 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: BIT0 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>40 </TD>
+    <TD>Use of bit operator on signed type. : &amp;=3D used with int: =
+P1OUT </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>40 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: BIT0 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>45 </TD>
+    <TD>Use of bit operator on signed type. : | used with int: LPM4_bits =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#top_of_rep"=
+>Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#key_to_term=
+s">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#procedure_t=
+able">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#contents">C=
+ontents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dusci0rx_isr_main.c_main.c_2></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT size=3D5><A class=3Dset1=20
+      href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Nouveau =
+dossier\main.c&amp;Line=3D55">USCI0RX_ISR<BR>(55=20
+      to 81 main.c) - FAIL =
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter>M </TD>
+    <TD align=3Dcenter>61 </TD>
+    <TD>Function call with no prior declaration. : __delay_cycles </TD>
+    <TD>MISRA-C:2012 R.17.3 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>M </TD>
+    <TD align=3Dcenter>66 </TD>
+    <TD>Function call with no prior declaration. : __delay_cycles </TD>
+    <TD>MISRA-C:2012 R.17.3 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>M </TD>
+    <TD align=3Dcenter>72 </TD>
+    <TD>Function call with no prior declaration. : __delay_cycles </TD>
+    <TD>MISRA-C:2012 R.17.3 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>M </TD>
+    <TD align=3Dcenter>78 </TD>
+    <TD>Function call with no prior declaration. : __delay_cycles </TD>
+    <TD>MISRA-C:2012 R.17.3 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>55 </TD>
+    <TD>No prototype for non-static function. : USCI0RX_ISR </TD>
+    <TD>MISRA-C:2012 R.8.4 </TD></TR>
+  <TR>
+    <TD align=3Dcenter><A id=3Dfirst_76_d>C</A> </TD>
+    <TD align=3Dcenter>55 </TD>
+    <TD>Procedure is not called or referenced in code analysed. : =
+USCI0RX_ISR=20
+    </TD>
+    <TD>MISRA-C:2012 R.2.1 </TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#top_of_rep"=
+>Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#key_to_term=
+s">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#procedure_t=
+able">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#contents">C=
+ontents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dinit_spi_spi_init.c_spi_init.c_1></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT size=3D5><A class=3Dset1=20
+      href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Nouveau =
+dossier\SPI_Init.c&amp;Line=3D25">Init_SPI<BR>(25=20
+      to 34 SPI_Init.c) - FAIL =
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>26 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: =
+USICTL0 </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>26 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: =
+USISWRST </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>27 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: =
+USICTL0 </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>27 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: USIPE7 =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>28 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: =
+USICTL1 </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>28 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: USIIE =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>30 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: =
+USICTL1 </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>30 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: =
+USICKPL </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>31 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: =
+USICTL1 </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>31 </TD>
+    <TD>Use of bit operator on signed type. : |=3D used with int: =
+USICKPH </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>32 </TD>
+    <TD>Use of bit operator on signed type. : &amp;=3D used with int: =
+USICTL0=20
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>32 </TD>
+    <TD>Use of bit operator on signed type. : ~ used with int: USISWRST =
+</TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>25 </TD>
+    <TD>No prototype for non-static function. : Init_SPI </TD>
+    <TD>MISRA-C:2012 R.8.4 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>25 </TD>
+    <TD>Void function has no side effects. : Init_SPI </TD>
+    <TD>MISRA-C:2012 R.2.2 </TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#top_of_rep"=
+>Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#key_to_term=
+s">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#procedure_t=
+able">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#contents">C=
+ontents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Drx_data_spi_init.c_spi_init.c_2></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#ff0000><FONT size=3D5><A class=3Dset1=20
+      href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Nouveau =
+dossier\SPI_Init.c&amp;Line=3D46">RX_Data<BR>(46=20
+      to 50 SPI_Init.c) - FAIL =
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+Standards=20
+Violation Summary </H4>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TH>Code </TH>
+    <TH>Line </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR>
+    <TD align=3Dcenter><A id=3Dfirst_28_d>C</A> </TD>
+    <TD align=3Dcenter>47 </TD>
+    <TD>Potentially infinite loop found. </TD>
+    <TD>MISRA-C:2012 R.2.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>47 </TD>
+    <TD>Use of bit operator on signed type. : &amp; used with int: =
+USICTL1 </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>47 </TD>
+    <TD>Use of bit operator on signed type. : &amp; used with int: =
+USIIFG </TD>
+    <TD>MISRA-C:2012 R.10.1 </TD></TR>
+  <TR>
+    <TD align=3Dcenter><A id=3Dfirst_101_s>C</A> </TD>
+    <TD align=3Dcenter>49 </TD>
+    <TD>Function return type inconsistent. : (char and int) </TD>
+    <TD>MISRA-C:2012 R.10.3 </TD></TR>
+  <TR>
+    <TD align=3Dcenter>C </TD>
+    <TD align=3Dcenter>46 </TD>
+    <TD>No prototype for non-static function. : RX_Data </TD>
+    <TD>MISRA-C:2012 R.8.4 </TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#top_of_rep"=
+>Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#key_to_term=
+s">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#procedure_t=
+able">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#contents">C=
+ontents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dmotor_ir_init_driver_motor_ir.c_driver_motor_ir.c_1></A><BR>
+<HR width=3D"60%">
+<BR>
+<CENTER>
+<TABLE width=3D"50%" border=3D1>
+  <TBODY>
+  <TR>
+    <TH bgColor=3D#00a000><FONT size=3D5><A class=3Dset1=20
+      href=3D"ldra://editor/?File=3DC:\Users\z.li.14\Desktop\Nouveau =
+dossier\Driver_Motor_IR.c&amp;Line=3D22">Motor_IR_Init<BR>(22=20
+      to 28 Driver_Motor_IR.c) - Pass=20
+</FONT></A></TH></TR></TBODY></TABLE></CENTER><BR><BR>
+<H4><SPAN style=3D"WIDTH: 5%; FLOAT: left; DISPLAY: block">&nbsp;</SPAN> =
+All=20
+selected standards satisfied </H4><BR>
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#top_of_rep"=
+>Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#key_to_term=
+s">Key=20
+      to Terms</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#procedure_t=
+able">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#contents">C=
+ontents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR><BR><A=20
+id=3Dkey_to_terms></A><BR>
+<CENTER>
+<H2>Key to Terms </H2></CENTER><BR>
+<H4>Standards violations for procedures are printed in tables with code =
+markers=20
+as follows: </H4><BR>
+<CENTER>
+<TABLE bgColor=3D#d7eded border=3D1>
+  <TBODY>
+  <TR align=3Dcenter>
+    <TH>Code </TH>
+    <TH>(Line) </TH>
+    <TH>Violation </TH>
+    <TH>Standard </TH></TR>
+  <TR align=3Dcenter>
+    <TD>M </TD>
+    <TD>(Source line number) </TD>
+    <TD>[Text of Mandatory standard] </TD>
+    <TD>[Appropriate rule reference] </TD></TR>
+  <TR align=3Dcenter>
+    <TD>C </TD>
+    <TD>&nbsp;</TD>
+    <TD>[Text of Required standard] </TD>
+    <TD>&nbsp;</TD></TR>
+  <TR align=3Dcenter>
+    <TD>O </TD>
+    <TD>&nbsp;</TD>
+    <TD>[Text of Advisory standard] </TD>
+    <TD>&nbsp;</TD></TR>
+  <TR align=3Dcenter>
+    <TH colSpan=3D4><CODE>[Source: Text of line from Source file]=20
+  </CODE></TH></TR></TBODY></TABLE></CENTER><BR><BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;Required=20
+standards are considered mandatory but individual instances may be =
+overridden by=20
+adding annotations to the source code <BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;Advisory=20
+standards provide additional quality criteria but may be violated =
+<BR><BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;For=20
+some standards violations, additional information is provided in results =
+tables=20
+<BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;Note=20
+that source lines do not show macro expansions <BR><BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;"Off"=20
+in Summary tables indicates that a standard is switched off in the =
+<LANG>pen.dat=20
+file <BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;"MR"=20
+in Summary tables indicates a MISRA Restricted standard which cannot be =
+checked=20
+without the MISRA licence option. <BR><BR><BR>
+<H4>A summary is given of the pass/fail result of each program component =
+as=20
+follows: </H4><BR>
+<CENTER>
+<TABLE bgColor=3D#d7eded>
+  <TBODY>
+  <TR>
+    <TD>Components which pass all standards are marked: </TD>
+    <TD bgColor=3Dgreen ,><FONT color=3Dwhite>Pass </FONT></TD></TR>
+  <TR>
+    <TD>Components which fail only Advisory standards are marked: </TD>
+    <TD bgColor=3Dyellow ,><FONT color=3Dblue>Conditional Pass =
+</FONT></TD></TR>
+  <TR>
+    <TD>Components which fail on insufficient comments only are marked: =
+</TD>
+    <TD bgColor=3Dorange ,><FONT color=3Dblue>Comment FAIL =
+</FONT></TD></TR>
+  <TR>
+    <TD>Components which violate Mandatory standards are marked: </TD>
+    <TD bgColor=3D#ff8181 ,><FONT color=3Dblue>FAIL=20
+</FONT></TD></TR></TBODY></TABLE></CENTER><BR><A =
+id=3Dunq_key></A><BR><BR>
+<H4>Procedure Results table breakdown (Example Only) </H4><BR>
+<CENTER>
+<TABLE width=3D"60%" bgColor=3D#ece2e2 border=3D1>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE width=3D"100%" bgColor=3D#ece2e2>
+        <TBODY>
+        <TR>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH>
+          <TH width=3D5></TH></TR>
+        <TR align=3Dleft>
+          <TH colSpan=3D11><TT>Unique Violations </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH width=3D"49%" colSpan=3D11><TT>Failure Density </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH></TR>
+        <TR align=3Dleft>
+          <TH width=3D"49%" colSpan=3D11><TT>&nbsp; </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH>
+          <TH colSpan=3D11><TT>(Viols/R.Line %) </TT></TH>
+          <TH width=3D"1%">&nbsp;</TH></TR>
+        <TR align=3Dleft>
+          <TD bgColor=3D#e17b87 colSpan=3D7>65 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D4><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D11><FONT color=3Dwhite>150 =
+</FONT></TD>
+          <TD></TD></TR>
+        <TR align=3Dleft>
+          <TD bgColor=3D#e17b87 colSpan=3D4>35 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D7><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          <TD></TD>
+          <TD bgColor=3D#e17b87 colSpan=3D4>39 </TD>
+          <TD bgColor=3D#afe1ab colSpan=3D7><FONT color=3D#afe1ab>- =
+</FONT></TD>
+          =
+<TD></TD></TR></TD></TR></TBODY></TABLE></TR></TBODY></TABLE></CENTER><BR=
+><BR><BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;The=20
+Violation density for a function is the number of violations per =
+reformatted=20
+line, expressed as a percentage. <BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;It=20
+is an indication of code quality. <BR><BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;Functions=20
+with a high violation density are likely to be smaller functions with a =
+large=20
+number of violations. <BR><BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;Lower=20
+density may indicate larger functions with fewer violations. =
+<BR><BR><FONT=20
+color=3D#6571c9>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(nViols=20
+/ nRefLines) x 100 <BR><BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;where:=20
+<BR><BR><FONT=20
+color=3D#6571c9>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nViols=20
+=3D number of standard violations in a function. <BR><BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;and:=20
+<BR><BR><FONT=20
+color=3D#6571c9>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nRefLines=20
+=3D number of reformatted lines in a function. <BR><BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;The=20
+unique standards failure ratio is an indication of variety of standards=20
+violations in a module. <BR><BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;Thus=20
+a function containing one instance of several different standards will =
+have a=20
+high ratio, <BR><FONT=20
+color=3Dblack>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;while=20
+a function that has violated only one standard will have a low ratio. =
+<BR><BR>
+<HR>
+
+<CENTER>
+<TABLE bgColor=3D#fffff2>
+  <TBODY>
+  <TR>
+    <TH>[ </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#top_of_rep"=
+>Top=20
+      of Report</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#procedure_t=
+able">Procedure=20
+      Table</A> </TD>
+    <TH>| </TH>
+    <TD><A=20
+      =
+href=3D"file:///C:/LDRA_Workarea/slave_tbwrkfls/slave.rps.htm#contents">C=
+ontents</A>=20
+    </TD>
+    <TH>] </TH></TR></TBODY></TABLE></CENTER><BR>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 425px; MARGIN: 0px auto; DISPLAY: =
+block"></DIV><BR>
+<CENTER>
+<H3>End of Code Review Report </H3></CENTER>
+<CENTER>
+<H3></H3></CENTER>
+<CENTER>
+<H3>Copyright =A9 2017 Liverpool Data Research Associates </H3></CENTER>
+<DIV class=3Dbreak-p=20
+style=3D"HEIGHT: 10px; WIDTH: 80%; MARGIN: 0px auto; DISPLAY: =
+block"></DIV></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FO=
+NT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></BODY>=
+</HTML>
+
+------=_NextPart_000_0000_01D3C1DC.60AE5500
+Content-Type: application/javascript
+Content-Transfer-Encoding: 7bit
+Content-Location: file:///C:/LDRA_Workarea/slave_tbwrkfls/imagejs.js
+
+var temp_str ='<img src="file://C:\\LDRA_Toolsuite\\images/';
+var base_str ='<a href="file://C:\\LDRA_Toolsuite\\';
+var ie_ver = getIE_ver();
+function getIE_ver()
+{
+var ret = -1;
+if (navigator.appName == 'Microsoft Internet Explorer')
+{
+var ua = navigator.userAgent;
+var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+if (re.exec(ua) != null)
+{
+ret = parseFloat( RegExp.$1 );
+}
+}
+return ret;
+}
+
+------=_NextPart_000_0000_01D3C1DC.60AE5500--
